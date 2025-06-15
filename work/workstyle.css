@@ -8,14 +8,14 @@ body {
 
 @font-face {
   font-family: 'Gord Qucik';
-  src: url('assets/GordQucik.otf') format('opentype');
+  src: url('/assets/GordQucik.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Karla';
-  src: url('assets/fonts/Karla') format('opentype');
+  src: url('/assets/fonts/Karla') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
