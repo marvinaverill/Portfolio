@@ -1,0 +1,259 @@
+
+/* === Base Styles === */
+body {
+  background: #F0F0EF;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  color: #212121;
+}
+
+@font-face {
+  font-family: 'Gord Qucik';
+  src: url('assets/GordQucik.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url('assets/fonts/Karla') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.main-content {
+  max-width: 2560px;
+  margin: 0 auto;
+  padding: 48px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* === Header === */
+.work-bar {
+  max-width: 2560px;
+  background-color: #F0F0EF;
+  height: 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 48px;
+}
+
+/* Back Button */
+
+.back-Button:hover {
+  width: 56px;
+  height: 56px;
+  transform: rotate(360deg);
+  transition: transform 0.4s ease;
+}
+
+.back-Button:active {
+  transform: rotate(360deg);
+  transition: transform 0.6s ease;
+  border-radius: 120px;
+  object-fit: contain;
+}
+
+.share-Button:hover{
+    transform: rotate(360deg);
+    transition: transform 0.4s ease;
+    object-fit: contain;
+  }
+
+.share-Button:active {
+  transform: rotate(360deg);
+  transition: transform 0.6s ease;
+  border-radius: 120px;
+  object-fit: contain;
+}
+
+/* === Toggle Tabs === */
+.toggle-tab-wrapper {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 8px;
+  white-space: normal; /* allow text wrapping */
+}
+
+.toggle-tab {
+  display: inline-flex;
+  background: #ffffff;
+  border-radius: 999px;
+  padding: 8px;
+  gap: 8px;
+}
+
+.tab-button {
+  border: none;
+  background: transparent;
+  padding: 8px 16px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Karla', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #212121;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-button img {
+  width: 16px;
+  height: 16px;
+}
+
+.tab-button.active {
+  background: #F0F3F7;
+  border: 2px solid #E5E5E5;
+  font-weight: 600;
+}
+
+.title-label {
+  font-family: 'Gord Qucik', sans-serif;
+  font-size: 24px;
+  color: #3A4E7A;
+  display: inline-block;
+  width: auto !important;
+}
+
+.main-content
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-content{
+  max-width: 768px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background-color: white;
+  padding: 24px;
+  border-radius: 24px;
+  border: 2px solid #ffffff60;
+}
+.summary-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.subtitle-label{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.point-label{
+  font-weight: 600;
+}
+.time-label{
+  font-weight: 600;
+  color: #828282;
+}
+
+.description-point{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.education-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+
+/* === Responsive Styles === */
+@media (max-width: 1024px) {
+  .main-content {
+    padding: 24px;
+  }
+
+  .work-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #F0F0EF;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px;
+}
+}
+
+
+/* === Responsive Styles === */
+@media (max-width: 640px) {
+  .main-content {
+    padding: 16px;
+  }
+
+  .back-Button{
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+
+  .share-Button{
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+
+  .work-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #F0F0EF;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px;
+}
+
+.tab-button {
+  border: none;
+  background: transparent;
+  padding: 8px 16px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Karla', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #212121;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.text-content{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background-color: white;
+  padding: 16px;
+  border-radius: 24px;
+  border: 2px solid #ffffff60;
+}
+}

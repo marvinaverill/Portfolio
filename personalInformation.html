@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Information</title>
+  <link rel="stylesheet" href="personalstyle.css" />
+  <link rel="icon" href="assets/marvinLogo.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" sizes="32x32" />
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="work-bar">
+    <a href="homeMarvin.html">
+      <div class="back-Button">
+        <img src="assets/backButton.svg" alt="back" class="back-Button" />
+      </div>
+    </a>
+
+    <!-- Toggle Tabs -->
+    <div class="toggle-tab-wrapper">
+      <div class="toggle-tab">
+        <button class="tab-button active" id="about-tab" aria-selected="true">
+          <img src="assets/info.svg" alt="Info" />
+          About
+        </button>
+        <button class="tab-button" id="resume-tab" aria-selected="false">
+          <img src="assets/resume.svg" alt="Resume" />
+          Resume
+        </button>
+      </div>
+    </div>
+
+    <a href="homeMarvin.html">
+      <div class="back-Button">
+        <img src="assets/shareButton.svg" alt="shareButton" class="share-Button" />
+      </div>
+    </a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+
+    <!-- About Section (Placeholder only) -->
+    <div id="about-content">
+      <div class="text-content">
+        <div class="title-label">ABOUT</div>
+        <p>This section is under construction. Please check the Resume tab.</p>
+      </div>
+    </div>
+
+    <!-- Resume Section -->
+    <div id="resume-content" class="hidden">
+      <div class="text-content">
+
+        <!-- Summary -->
+        <div class="summary-section">
+          <div class="title-label">Profile</div>
+          <p>I am a UI/UX designer with expertise in creative problem-solving and developing innovative digital solutions. I am committed to making a significant impact, embracing challenges, and continuously enhancing my skills to achieve successful outcomes.</p>
+        </div>
+
+        <!-- Experiences -->
+        <div class="experience-section">
+          <div class="title-label">Working Experience</div>
+
+          <!-- Job 1 -->
+          <div class="job">
+            <div class="subtitle-label">
+              <div class="point-label">Product Designer @123RF</div>
+              <div class="time-label">July 2023 - Present</div>
+            </div>
+            <ul class="description-point">
+              <li>Started as a UI/UX intern and was promoted to full-time Product Designer based on performance and contributions.</li>
+              <li>Conducted research and competitor analysis to design and refine feature workflows based on project briefs and user feedback.</li>
+              <li>Developed responsive designs, ensuring optimal usability and consistency across various devices and screen sizes.</li>
+              <li>Worked closely with developers, designers, and stakeholders to align product goals.</li>
+              <li>Created polished UI designs, ensuring seamless user experience and functionality.</li>
+              <li>Managed the integration of 11 AI tools from 123RF into blieve.ai, creating a unified platform for a seamless user experience.</li>
+            </ul>
+          </div>
+
+          <!-- Job 2 -->
+          <div class="job">
+            <div class="subtitle-label">
+              <div class="point-label">Graphic Design Freelance</div>
+              <div class="time-label">August 2020 - Present</div>
+            </div>
+            <ul class="description-point">
+              <li>Created visual designs for posters, brochures, banners, social media, and advertisements.</li>
+              <li>Teamed up with designers to design websites for clients, including portfolio and company pages.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="education-section">
+          <div class="title-label">Academic Background</div>
+
+          <div class="job">
+            <div class="subtitle-label">
+              <div class="point-label">THE ONE ACADEMY</div>
+              <div class="time-label">2020 - 2023</div>
+            </div>
+            <ul class="description-point">
+              <li>DIPLOMA IN DIGITAL MEDIA DESIGN | CGPA 2.39</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Awards -->
+        <div class="education-section">
+          <div class="title-label">Winning Awards</div>
+
+          <div class="job">
+            <div class="subtitle-label">
+              <div class="point-label">123RF HACKATHON</div>
+              <div class="time-label">2024</div>
+            </div>
+            <ul class="description-point">
+              <li>1st place | New AI Tools</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <div class="subtitle-label">
+              <div class="point-label">STUDENTS KANCILS</div>
+              <div class="time-label">2024</div>
+            </div>
+            <ul class="description-point">
+              <li>SILVER | Digital Craft</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <div class="subtitle-label">
+              <div class="point-label">ROOKIE AWARDS</div>
+              <div class="time-label">2024</div>
+            </div>
+            <ul class="description-point">
+              <li>Rank C | Game Development</li>
+            </ul>
+          </div>
+
+          </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Toggle Script -->
+  <script>
+    const aboutBtn = document.getElementById("about-tab");
+    const resumeBtn = document.getElementById("resume-tab");
+
+    const aboutContent = document.getElementById("about-content");
+    const resumeContent = document.getElementById("resume-content");
+
+    aboutBtn.addEventListener("click", () => {
+      aboutBtn.classList.add("active");
+      resumeBtn.classList.remove("active");
+      aboutBtn.setAttribute("aria-selected", "true");
+      resumeBtn.setAttribute("aria-selected", "false");
+      aboutContent.classList.remove("hidden");
+      resumeContent.classList.add("hidden");
+    });
+
+    resumeBtn.addEventListener("click", () => {
+      resumeBtn.classList.add("active");
+      aboutBtn.classList.remove("active");
+      resumeBtn.setAttribute("aria-selected", "true");
+      aboutBtn.setAttribute("aria-selected", "false");
+      resumeContent.classList.remove("hidden");
+      aboutContent.classList.add("hidden");
+    });
+  </script>
+
+</body>
+</html>
