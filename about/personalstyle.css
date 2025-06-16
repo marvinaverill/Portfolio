@@ -279,5 +279,6 @@ body {
 
   #toast {
     min-width: 75%;
+    font-size: 12px;
   }
 }
