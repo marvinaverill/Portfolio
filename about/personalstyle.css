@@ -1,40 +1,46 @@
-
 /* === Base Styles === */
+html,
 body {
-  background: #F0F0EF;
-  font-family: 'Karla', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
   font-size: 16px;
   color: #212121;
+  background: #f0f0ef;
 }
 
 @font-face {
-  font-family: 'Gord Qucik';
-  src: url('/assets/GordQucik.otf') format('opentype');
+  font-family: "Gord Qucik";
+  src: url("/assets/GordQucik.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Karla';
-  src: url('/assets/fonts/Karla') format('opentype');
+  font-family: "Karla";
+  src: url("/assets/Karla.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 .main-content {
-  max-width: 2560px;
-  margin: 0 auto;
-  padding: 48px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 48px;
+  box-sizing: border-box;
+  max-width: 2560px;
+  margin: 0 auto;
   gap: 24px;
 }
 
 /* === Header === */
 .work-bar {
   max-width: 2560px;
-  background-color: #F0F0EF;
+  background-color: #f0f0ef;
   height: 88px;
   display: flex;
   justify-content: space-between;
@@ -43,7 +49,6 @@ body {
 }
 
 /* Back Button */
-
 .back-Button:hover {
   width: 56px;
   height: 56px;
@@ -58,11 +63,11 @@ body {
   object-fit: contain;
 }
 
-.share-Button:hover{
-    transform: rotate(360deg);
-    transition: transform 0.4s ease;
-    object-fit: contain;
-  }
+.share-Button:hover {
+  transform: rotate(360deg);
+  transition: transform 0.4s ease;
+  object-fit: contain;
+}
 
 .share-Button:active {
   transform: rotate(360deg);
@@ -79,7 +84,7 @@ body {
   flex-direction: column;
   text-align: center;
   gap: 8px;
-  white-space: normal; /* allow text wrapping */
+  white-space: normal;
 }
 
 .toggle-tab {
@@ -98,7 +103,7 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: 600;
   font-size: 16px;
   color: #212121;
@@ -112,27 +117,20 @@ body {
 }
 
 .tab-button.active {
-  background: #F0F3F7;
-  border: 2px solid #E5E5E5;
+  background: #f0f3f7;
+  border: 2px solid #e5e5e5;
   font-weight: 600;
 }
 
 .title-label {
-  font-family: 'Gord Qucik', sans-serif;
+  font-family: "Gord Qucik", sans-serif;
   font-size: 24px;
-  color: #3A4E7A;
+  color: #3a4e7a;
   display: inline-block;
   width: auto !important;
 }
 
-.main-content
-{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.text-content{
+.text-content {
   max-width: 768px;
   display: flex;
   flex-direction: column;
@@ -142,6 +140,7 @@ body {
   border-radius: 24px;
   border: 2px solid #ffffff60;
 }
+
 .summary-section {
   display: flex;
   flex-direction: column;
@@ -153,33 +152,47 @@ body {
   gap: 16px;
 }
 
-.subtitle-label{
+.subtitle-label {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 40px;
 }
 
-.point-label{
+.point-label {
   font-weight: 600;
 }
-.time-label{
+
+.time-label {
   font-weight: 600;
   color: #828282;
 }
 
-.description-point{
+.description-point {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
+
 .education-section {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
+#about-content {
+  width: 100%;
+  max-width: 768px;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
 
+.about-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+}
 
 /* === Responsive Styles === */
 @media (max-width: 1024px) {
@@ -188,72 +201,59 @@ body {
   }
 
   .work-bar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: #F0F0EF;
-  height: 88px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 16px;
-}
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #f0f0ef;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 16px;
+  }
 }
 
-
-/* === Responsive Styles === */
 @media (max-width: 640px) {
   .main-content {
     padding: 16px;
   }
 
-  .back-Button{
+  .back-Button {
     width: 48px;
     height: 48px;
     object-fit: contain;
   }
 
-  .share-Button{
+  .share-Button {
     width: 48px;
     height: 48px;
     object-fit: contain;
   }
 
   .work-bar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: #F0F0EF;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 16px;
-}
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #f0f0ef;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 16px;
+  }
 
-.tab-button {
-  border: none;
-  background: transparent;
-  padding: 8px 16px;
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: 'Karla', sans-serif;
-  font-weight: 600;
-  font-size: 12px;
-  color: #212121;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
+  .tab-button {
+    font-size: 12px;
+  }
 
-.text-content{
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  background-color: white;
-  padding: 16px;
-  border-radius: 24px;
-  border: 2px solid #ffffff60;
-}
+  .text-content {
+    padding: 16px;
+  }
+
+  #about-content {
+    width: 100%;
+    max-width: 768px;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
 }
