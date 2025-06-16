@@ -1,23 +1,45 @@
 /* === Base Styles === */
 body {
-  background: #F0F0EF;
-  font-family: 'Karla', sans-serif;
+  background: #f0f0ef;
+  font-family: "Karla", sans-serif;
   font-size: 16px;
   color: #212121;
 }
 
 @font-face {
-  font-family: 'Gord Qucik';
-  src: url('/assets/GordQucik.otf') format('opentype');
+  font-family: "Gord Qucik";
+  src: url("/assets/GordQucik.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Karla';
-  src: url('/assets/fonts/Karla') format('opentype');
+  font-family: "Karla";
+  src: url("/assets/Karla.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
+}
+
+#toast {
+  visibility: hidden;
+  min-width: 120px;
+  background-color: #212121;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 12px;
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+#toast.show {
+  visibility: visible;
+  opacity: 1;
 }
 
 .main-content {
@@ -33,21 +55,21 @@ body {
 /* === Typography Utilities === */
 .font-heading,
 .title-label {
-  font-family: 'Gord Qucik', sans-serif;
+  font-family: "Gord Qucik", sans-serif;
 }
 
 .title-label {
-  font-family: 'Gord Qucik', sans-serif;
+  font-family: "Gord Qucik", sans-serif;
   display: inline-block;
   font-size: 24px;
-  color: #3A4E7A;
+  color: #3a4e7a;
 }
 
 /* === Button Component === */
 .button-style {
   display: inline-block;
   padding: 16px 40px;
-  background-color: #3A4E7A;
+  background-color: #3a4e7a;
   color: #fff;
   font-size: 16px;
   font-weight: 500;
@@ -56,14 +78,14 @@ body {
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   align-self: flex-start;
 }
 
 .button-style:hover {
-  background-color: #97A2B9;
+  background-color: #97a2b9;
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.4),
-              0 8px 16px rgba(0, 0, 0, 0.12);
+    0 8px 16px rgba(0, 0, 0, 0.12);
   transition: 0.4s ease;
 }
 
@@ -93,7 +115,7 @@ body {
 
 /* === Buttons/Icons Hover === */
 .arrow-button:hover {
-  background-color: #97A2B9;
+  background-color: #97a2b9;
   box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.4);
   border-radius: 120px;
   opacity: 0.8;
@@ -102,24 +124,23 @@ body {
   object-fit: contain;
 }
 
-.back-Button:hover{
-    transform: rotate(360deg);
-    transition: transform 0.6s ease;
-    object-fit: contain;
-  }
+.back-Button:hover {
+  transform: rotate(360deg);
+  transition: transform 0.6s ease;
+  object-fit: contain;
+}
 
 .back-Button:active {
-  transform: rotate(360deg);
   transition: transform 0.6s ease;
   border-radius: 120px;
   object-fit: contain;
 }
 
-.share-Button:hover{
-    transform: rotate(360deg);
-    transition: transform 0.6s ease;
-    object-fit: contain;
-  }
+.share-Button:hover {
+  transform: rotate(360deg);
+  transition: transform 0.6s ease;
+  object-fit: contain;
+}
 
 .share-Button:active {
   transform: rotate(360deg);
@@ -134,7 +155,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #F0F0EF;
+  background-color: #f0f0ef;
   height: 88px;
   display: flex;
   align-items: center;
@@ -185,7 +206,7 @@ body {
   font-weight: 600;
   color: #212121;
   padding: 6px 12px;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   border-radius: 56px;
   border: 1px solid #ccc;
 }
@@ -203,17 +224,16 @@ body {
   }
 
   .work-bar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: #F0F0EF;
-  height: 88px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 16px;
-}
-
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #f0f0ef;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 16px;
+  }
 
   .thumbnail-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -241,27 +261,26 @@ body {
   }
 
   .work-bar {
-  position: sticky;
-  z-index: 1000;
-  background-color: #F0F0EF;
-  height: 48px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 16px;
+    position: sticky;
+    z-index: 1000;
+    background-color: #f0f0ef;
+    height: 48px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 16px;
   }
 
-  .back-Button{
+  .back-Button {
     width: 48px;
     height: 48px;
     object-fit: contain;
   }
 
-  .share-Button{
+  .share-Button {
     width: 48px;
     height: 48px;
     object-fit: contain;
   }
-
 
   .thumbnail-grid {
     display: flex;
@@ -270,9 +289,12 @@ body {
     padding: 0;
   }
 
-
   .thumbnail-tags {
     bottom: 16px;
     left: 16px;
+  }
+
+  #toast {
+    min-width: 75%;
   }
 }
