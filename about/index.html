@@ -48,15 +48,15 @@
         </div>
       </div>
 
-      <a href="../">
-        <div class="back-Button">
-          <img
-            src="../assets/shareButton.svg"
-            alt="shareButton"
-            class="share-Button"
-          />
-        </div>
-      </a>
+      <div class="back-Button" id="copyButton">
+        <img
+          src="../assets/shareButton.svg"
+          alt="shareButton"
+          class="share-Button"
+        />
+      </div>
+
+      <div id="toast">Link copied! Now go spam it in your group chat 💌</div>
     </div>
 
     <!-- Main Content -->
@@ -220,6 +220,18 @@
         aboutBtn.setAttribute("aria-selected", "false");
         resumeContent.classList.remove("hidden");
         aboutContent.classList.add("hidden");
+      });
+
+      const button = document.getElementById("copyButton");
+      const toast = document.getElementById("toast");
+
+      button.addEventListener("click", () => {
+        navigator.clipboard.writeText(window.location.origin + "/").then(() => {
+          toast.classList.add("show");
+          setTimeout(() => {
+            toast.classList.remove("show");
+          }, 3500);
+        });
       });
     </script>
   </body>
