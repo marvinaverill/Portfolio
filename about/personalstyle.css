@@ -142,7 +142,7 @@ body {
   gap: 32px;
   background-color: white;
   padding: 24px;
-  border-radius: 24px;
+  border-radius: 16px;
   border: 2px solid #ffffff60;
 }
 
@@ -189,7 +189,7 @@ body {
   background-color: #fff;
   display: flex;
   width: 100%;
-  border-radius: 24px;
+  border-radius: 16px;
   width: 100%;
   padding: 32px;
   box-sizing: border-box;
@@ -251,7 +251,7 @@ body {
   margin: 0 auto;
   padding: 32px;
   box-sizing: border-box;
-  border-radius: 24px;
+  border-radius: 16px;
   background-color: white;
   overflow: hidden; /* ensures children don’t overflow */
 }
