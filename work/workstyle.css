@@ -4,6 +4,8 @@ body {
   font-family: "Karla", sans-serif;
   font-size: 16px;
   color: #212121;
+  padding: 0px;
+  margin: 0px;
 }
 
 @font-face {
@@ -23,13 +25,13 @@ body {
 #toast {
   visibility: hidden;
   min-width: 120px;
-  background-color: #212121;
+  background-color: #3a4e7a;
   color: #fff;
   text-align: center;
   border-radius: 8px;
   padding: 12px;
   position: fixed;
-  bottom: 40px;
+  bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 999;
@@ -151,16 +153,17 @@ body {
 
 /* === Header === */
 .work-bar {
-  max-width: 2560px;
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #f0f0ef;
-  height: 88px;
+  background-color: rgba(240, 240, 239, 0.6); /* semi-transparent */
+  backdrop-filter: blur(16px); /* blur effect */
+  -webkit-backdrop-filter: blur(16px); /* for Safari */
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 48px;
+  padding: 16px 24px;
 }
 
 /* === Title Description === */
@@ -227,12 +230,14 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: #f0f0ef;
-    height: 88px;
+    background-color: rgba(240, 240, 239, 0.6); /* semi-transparent */
+    backdrop-filter: blur(16px); /* blur effect */
+    -webkit-backdrop-filter: blur(16px); /* for Safari */
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 16px;
+    padding: 16px 24px;
   }
 
   .thumbnail-grid {
@@ -262,9 +267,13 @@ body {
 
   .work-bar {
     position: sticky;
+    top: 0;
     z-index: 1000;
-    background-color: #f0f0ef;
-    height: 48px;
+    background-color: rgba(240, 240, 239, 0.6); /* semi-transparent */
+    backdrop-filter: blur(16px); /* blur effect */
+    -webkit-backdrop-filter: blur(16px); /* for Safari */
+    height: auto;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 16px 16px;
