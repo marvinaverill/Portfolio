@@ -253,7 +253,6 @@ body {
   box-sizing: border-box;
   border-radius: 16px;
   background-color: white;
-  overflow: hidden; /* ensures children don’t overflow */
 }
 
 .cardtitle {
@@ -354,6 +353,9 @@ body {
 .contact-row a {
   color: #212121;
   text-decoration: underline;
+}
+.easter-text {
+  color: #e5e5e5;
 }
 
 @media (min-width: 1025px) and (max-width: 1155px) {
@@ -657,5 +659,9 @@ body {
     top: 0;
     left: 0;
     transform: none;
+  }
+
+  .easter-text {
+    display: none;
   }
 }
