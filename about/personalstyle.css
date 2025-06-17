@@ -2,8 +2,8 @@
 html,
 body {
   height: 100%;
-  margin: 0;
-  padding: 0;
+  padding: 0px;
+  margin: 0px;
   font-family: "Karla", sans-serif;
   font-size: 16px;
   color: #212121;
@@ -28,7 +28,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 100vh;
   padding: 48px;
   box-sizing: border-box;
@@ -36,16 +36,19 @@ body {
   margin: 0 auto;
   gap: 24px;
 }
-
 /* === Header === */
 .work-bar {
-  max-width: 2560px;
-  background-color: #f0f0ef;
-  height: 88px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(240, 240, 239, 0.6); /* semi-transparent */
+  backdrop-filter: blur(8px); /* blur effect */
+  -webkit-backdrop-filter: blur(8px); /* for Safari */
+  height: auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 16px 48px;
+  justify-content: space-between;
+  padding: 16px 24px;
 }
 
 /* Back Button */
@@ -72,6 +75,10 @@ body {
   transition: transform 0.6s ease;
   border-radius: 120px;
   object-fit: contain;
+}
+
+.hidden {
+  display: none !important;
 }
 
 /* === Toggle Tabs === */
@@ -179,29 +186,50 @@ body {
 }
 
 #about-content {
+  background-color: #fff;
+  display: flex;
   width: 100%;
-  max-width: 768px;
-  padding: 0 40px;
+  border-radius: 24px;
+  width: 100%;
+  padding: 32px;
   box-sizing: border-box;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about-image {
-  width: 100%;
+  position: relative;
+  max-width: 568px;
+  top: -200px;
   height: auto;
   display: block;
   border: none;
+  z-index: 3;
+}
+
+.hey-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+
+.heytitle {
+  font-size: 24px;
 }
 
 #toast {
   visibility: hidden;
   min-width: 120px;
-  background-color: #212121;
+  background-color: #3a4e7a;
   color: #fff;
   text-align: center;
   border-radius: 8px;
   padding: 12px;
   position: fixed;
-  bottom: 40px;
+  bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 999;
@@ -214,6 +242,187 @@ body {
   opacity: 1;
 }
 
+.aboutmain-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  max-width: 1440px; /* or your desired container size */
+  margin: 0 auto;
+  padding: 32px;
+  box-sizing: border-box;
+  border-radius: 24px;
+  background-color: white;
+  overflow: hidden; /* ensures children don’t overflow */
+}
+
+.cardtitle {
+  font-size: 16px;
+}
+
+.text-inside {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.blief-card {
+  position: relative;
+  left: -35%;
+  right: 0;
+  top: 150px;
+  margin: 0 auto;
+  transform: rotate(-2deg);
+  width: 300px;
+  max-width: 100%;
+  padding: 16px 24px;
+  border-radius: 8px;
+  background-color: #ffafa3;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.service-card {
+  position: relative;
+  right: -35%;
+  top: 0px;
+  margin: 0 auto;
+  transform: rotate(4deg);
+  width: 320px;
+  max-width: 100%;
+  padding: 16px 24px;
+  border-radius: 8px;
+  background-color: #a4edb2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.design-card {
+  position: relative;
+  left: -33%;
+  right: 0;
+  top: -280px;
+  margin: 0 auto;
+  transform: rotate(2deg);
+  width: 380px;
+  max-width: 100%;
+  padding: 16px 24px;
+  border-radius: 8px;
+  background-color: #7fc9fe;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.contact-card {
+  position: relative;
+  right: -35%;
+  top: -420px;
+  margin: 0 auto;
+  width: 320px;
+  max-width: 100%;
+  padding: 16px 24px;
+  border-radius: 8px;
+  background-color: #ffc470;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: "Karla", sans-serif;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+}
+
+.contact-row img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.contact-row a {
+  color: #212121;
+  text-decoration: underline;
+}
+
+@media (min-width: 1025px) and (max-width: 1155px) {
+  .blief-card {
+    position: relative;
+    left: -35%;
+    right: 0;
+    top: 150px;
+    margin: 0 auto;
+    transform: rotate(-2deg);
+    width: 300px;
+    max-width: 100%;
+    padding: 16px 24px;
+    border-radius: 8px;
+    background-color: #ffafa3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    box-sizing: border-box;
+  }
+
+  .service-card {
+    position: relative;
+    right: -35%;
+    top: 0px;
+    margin: 0 auto;
+    transform: rotate(4deg);
+    width: 300px;
+    max-width: 100%;
+    padding: 16px 24px;
+    border-radius: 8px;
+    background-color: #a4edb2;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    box-sizing: border-box;
+  }
+
+  .design-card {
+    position: relative;
+    left: -35%;
+    right: 0;
+    top: -350px;
+    margin: 0 auto;
+    transform: rotate(2deg);
+    width: 300px;
+    max-width: 100%;
+    padding: 16px 24px;
+    border-radius: 8px;
+    background-color: #7fc9fe;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    box-sizing: border-box;
+  }
+
+  .contact-card {
+    position: relative;
+    right: -35%;
+    top: -450px;
+    margin: 0 auto;
+    width: 300px;
+    max-width: 100%;
+    padding: 16px 24px;
+    border-radius: 8px;
+    background-color: #ffc470;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    box-sizing: border-box;
+  }
+}
+
 /* === Responsive Styles === */
 @media (max-width: 1024px) {
   .main-content {
@@ -224,18 +433,112 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: #f0f0ef;
-    height: 88px;
+    background-color: rgba(240, 240, 239, 0.6); /* semi-transparent */
+    backdrop-filter: blur(8px); /* blur effect */
+    -webkit-backdrop-filter: blur(8px); /* for Safari */
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 16px;
+    padding: 16px 24px;
+  }
+  #about-content {
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    border-radius: 24px;
+    width: 100%;
+    padding: 32px;
+    box-sizing: border-box;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .about-image {
+    position: relative;
+    max-width: 600px;
+    top: -200px;
+    height: auto;
+    display: block;
+    border: none;
+    z-index: 3;
+  }
+
+  .blief-card {
+    position: relative;
+    left: -25%;
+    right: 0;
+    top: 80px;
+    margin: 0 auto;
+    transform: rotate(-4deg);
+    width: 300px;
+    max-width: 100%;
+    padding: 16px 24px;
+    border-radius: 8px;
+    background-color: #ffafa3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    box-sizing: border-box;
+  }
+
+  .service-card {
+    position: relative;
+    right: -25%;
+    top: -128px;
+    margin: 0 auto;
+    transform: rotate(4deg);
+    width: 300px;
+    max-width: 100%;
+    padding: 16px 24px;
+    border-radius: 8px;
+    background-color: #a4edb2;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    box-sizing: border-box;
+  }
+
+  .design-card {
+    position: relative;
+    left: -25%;
+    right: 0;
+    top: -260px;
+    margin: 0 auto;
+    transform: rotate(2deg);
+    width: 300px;
+    max-width: 100%;
+    padding: 16px 24px;
+    border-radius: 8px;
+    background-color: #7fc9fe;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    box-sizing: border-box;
+  }
+
+  .contact-card {
+    position: relative;
+    right: -25%;
+    top: -460px;
+    margin: 0 auto;
+    width: 300px;
+    max-width: 100%;
+    padding: 16px 24px;
+    border-radius: 8px;
+    background-color: #ffc470;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    box-sizing: border-box;
   }
 }
 
 @media (max-width: 640px) {
-  .main-content {
+  .aboutmain-content {
     padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 
   .back-Button {
@@ -254,8 +557,10 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: #f0f0ef;
-    height: 48px;
+    background-color: rgba(240, 240, 239, 0.6); /* semi-transparent */
+    backdrop-filter: blur(8px); /* blur effect */
+    -webkit-backdrop-filter: blur(8px); /* for Safari */
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -271,14 +576,86 @@ body {
   }
 
   #about-content {
-    width: 100%;
-    max-width: 768px;
-    padding: 0 16px;
+    background-color: #fff;
+    display: flex;
+    border-radius: 12px;
+    padding: 16px;
     box-sizing: border-box;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .about-image {
+    top: 0; /* Cancel the -200px offset */
+    margin-bottom: 16px; /* Optional spacing below image */
+    max-width: 350px;
+  }
+  .description {
+    font-size: 12px;
   }
 
   #toast {
     min-width: 75%;
     font-size: 12px;
+  }
+
+  .about-image {
+    order: 1;
+  }
+
+  .blief-card {
+    order: 2;
+  }
+
+  .service-card {
+    order: 3;
+  }
+
+  .design-card {
+    order: 4;
+  }
+
+  .contact-card {
+    order: 4;
+  }
+
+  .blief-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+  .design-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+  .contact-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
   }
 }
