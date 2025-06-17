@@ -29,22 +29,22 @@ a {
 }
 
 body {
-  background: #F0F0EF;
-  font-family: 'Karla', sans-serif;
+  background: #f0f0ef;
+  font-family: "Karla", sans-serif;
   font-size: 16px;
   color: #212121;
 }
 
 @font-face {
-  font-family: 'Gord Qucik';
-  src: url('/assets/GordQucik.otf') format('opentype');
+  font-family: "Gord Qucik";
+  src: url("/assets/GordQucik.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Karla';
-  src: url('/assets/Karla') format('opentype');
+  font-family: "Karla";
+  src: url("/assets/Karla.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -60,7 +60,7 @@ body {
 }
 
 .font-heading {
-  font-family: 'Gord Qucik', sans-serif;
+  font-family: "Gord Qucik", sans-serif;
 }
 
 .top-bar {
@@ -97,9 +97,9 @@ body {
 }
 
 .marvin-text {
-  font-family: 'Gord Qucik', sans-serif;
+  font-family: "Gord Qucik", sans-serif;
   font-size: 192px;
-  color: #3A4E7A;
+  color: #3a4e7a;
   margin-bottom: -32px;
 }
 
@@ -110,9 +110,9 @@ body {
 }
 
 .averill-text {
-  font-family: 'Gord Qucik', sans-serif;
+  font-family: "Gord Qucik", sans-serif;
   font-size: 88px;
-  color: #3A4E7A;
+  color: #3a4e7a;
   white-space: nowrap;
 }
 
@@ -129,6 +129,10 @@ body {
   gap: 16px;
 }
 
+.small-icons:hover {
+  filter: drop-shadow(0 0 0.75rem #3a4e7a50);
+}
+
 .icon-circle {
   width: 32px;
   height: 32px;
@@ -139,14 +143,14 @@ body {
 .icon-circle:hover {
   opacity: 0.8;
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.4),
-              0 8px 16px rgba(0, 0, 0, 0.12);
+    0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
 .button-style {
   display: inline-block;
   width: auto !important;
   padding: 16px 40px;
-  background-color: #3A4E7A;
+  background-color: #3a4e7a;
   color: #fff;
   font-size: 16px;
   font-weight: 500;
@@ -156,13 +160,13 @@ body {
   text-align: center;
   text-decoration: none;
   align-self: flex-start;
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
 }
 
 .button-style:hover {
-  background-color: #97A2B9;
+  background-color: #97a2b9;
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.4),
-              0 8px 16px rgba(0, 0, 0, 0.12);
+    0 8px 16px rgba(0, 0, 0, 0.12);
   transition: 0.4s ease;
 }
 
@@ -205,9 +209,9 @@ body {
 
 .box-label,
 .title-label {
-  font-family: 'Gord Qucik', sans-serif;
+  font-family: "Gord Qucik", sans-serif;
   font-size: 24px;
-  color: #3A4E7A;
+  color: #3a4e7a;
   display: inline-block;
   width: auto !important;
 }
@@ -222,7 +226,7 @@ body {
 .info-box:hover,
 .work-box:hover {
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.4),
-              0 8px 16px rgba(0, 0, 0, 0.12);
+    0 8px 16px rgba(0, 0, 0, 0.12);
   transition: 0.4s ease;
 }
 
@@ -240,7 +244,7 @@ body {
 }
 
 .tags-label {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-size: 12px;
   font-weight: 600;
   color: #212121;
@@ -265,7 +269,7 @@ body {
 
 .arrow-button:hover,
 .back-Button:hover {
-  background-color: #97A2B9;
+  background-color: #97a2b9;
   border-radius: 120px;
   opacity: 0.8;
   transform: rotate(320deg);
@@ -276,7 +280,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #F0F0EF;
+  background-color: #f0f0ef;
   height: 88px;
   display: flex;
   align-items: center;
@@ -324,12 +328,12 @@ body {
 }
 
 .thumbnail-tag {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-size: 12px;
   font-weight: 600;
   color: #212121;
   padding: 6px 12px;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   border-radius: 56px;
   border: 1px solid #ccc;
 }
@@ -350,7 +354,7 @@ body {
     gap: 32px;
   }
 
-  .main-content{
+  .main-content {
     padding: 24px;
   }
 
@@ -358,7 +362,7 @@ body {
     display: block;
     width: 100% !important;
     padding: 16px;
-    background-color: #3A4E7A;
+    background-color: #3a4e7a;
     color: #fff;
     font-size: 16px;
     font-weight: 500;
@@ -367,14 +371,14 @@ body {
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    font-family: 'Karla', sans-serif;
+    font-family: "Karla", sans-serif;
     align-self: stretch;
   }
 
   .button-style:hover {
-    background-color: #97A2B9;
+    background-color: #97a2b9;
     box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.4),
-                0 8px 16px rgba(0, 0, 0, 0.12);
+      0 8px 16px rgba(0, 0, 0, 0.12);
     transition: 0.4s ease;
   }
 
@@ -406,12 +410,12 @@ body {
     height: 800px;
   }
 
-  .info-box, .work-box {
-    height: 320px; 
+  .info-box,
+  .work-box {
+    height: 320px;
     overflow: hidden;
     border-radius: 16px;
   }
-
 }
 
 /* ===================== */
@@ -470,7 +474,7 @@ body {
     display: inline-block;
     width: auto !important;
     padding: 16px 40px;
-    background-color: #3A4E7A;
+    background-color: #3a4e7a;
     color: #fff;
     font-size: 16px;
     font-weight: 500;
@@ -480,13 +484,13 @@ body {
     text-align: center;
     text-decoration: none;
     align-self: flex-start;
-    font-family: 'Karla', sans-serif;
+    font-family: "Karla", sans-serif;
   }
 
   .button-style:hover {
-    background-color: #97A2B9;
+    background-color: #97a2b9;
     box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.4),
-                0 8px 16px rgba(0, 0, 0, 0.12);
+      0 8px 16px rgba(0, 0, 0, 0.12);
     transition: 0.4s ease;
   }
 
@@ -596,7 +600,7 @@ body {
     display: inline-block;
     width: auto !important;
     padding: 16px 40px;
-    background-color: #3A4E7A;
+    background-color: #3a4e7a;
     color: #fff;
     font-size: 16px;
     font-weight: 500;
@@ -606,13 +610,13 @@ body {
     text-align: center;
     text-decoration: none;
     align-self: flex-start;
-    font-family: 'Karla', sans-serif;
+    font-family: "Karla", sans-serif;
   }
 
   .button-style:hover {
-    background-color: #97A2B9;
+    background-color: #97a2b9;
     box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.4),
-                0 8px 16px rgba(0, 0, 0, 0.12);
+      0 8px 16px rgba(0, 0, 0, 0.12);
     transition: 0.4s ease;
   }
 
@@ -712,7 +716,7 @@ body {
   }
 
   .marvin-text {
-    font-family: 'Gord Qucik';
+    font-family: "Gord Qucik";
     font-size: 94px;
     margin-bottom: -24px;
   }
@@ -744,7 +748,7 @@ body {
     display: block;
     width: 100% !important;
     padding: 16px;
-    background-color: #3A4E7A;
+    background-color: #3a4e7a;
     color: #fff;
     font-size: 16px;
     font-weight: 500;
@@ -753,14 +757,14 @@ body {
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    font-family: 'Karla', sans-serif;
+    font-family: "Karla", sans-serif;
     align-self: stretch;
   }
 
   .button-style:hover {
-    background-color: #97A2B9;
+    background-color: #97a2b9;
     box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.4),
-                0 8px 16px rgba(0, 0, 0, 0.12);
+      0 8px 16px rgba(0, 0, 0, 0.12);
     transition: 0.4s ease;
   }
 
@@ -770,12 +774,12 @@ body {
   }
 
   .seperator-line img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  margin: 24px 0;
-}
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 24px 0;
+  }
 
   .bottom-content {
     flex-direction: column;
@@ -849,24 +853,19 @@ body {
   }
 
   .gradient-bg {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  height: auto;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 1;
-  object-fit: cover;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 1;
+    object-fit: cover;
+  }
+
+  .heroLeft-section {
+    display: flex;
+    flex-direction: column;
+  }
 }
-
-.heroLeft-section {
-  display: flex;
-  flex-direction: column;
-}
-
-  
-}
-
-
-
