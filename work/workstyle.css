@@ -224,6 +224,64 @@ body {
   justify-content: center;
 }
 
+/* === Image Modal === */
+.image-modal {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  display: flex;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.image-modal .modal-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.image-modal.show .modal-content {
+  transform: scale(1); /* zoom to normal */
+}
+
+.modal-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease;
+  transform: scale(0.96); /* smaller initially */
+}
+
+.modal-close {
+  position: absolute;
+  top: 32px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+  user-select: none;
+}
+
+.image-modal.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 /* === Responsive Styles === */
 @media (max-width: 1024px) {
   .main-content {
