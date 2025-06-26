@@ -189,6 +189,11 @@ body {
   height: 100%;
   align-self: stretch;
 }
+.thumbnail:hover {
+  filter: drop-shadow(0 0 0.75rem #5f687b50);
+  border: solid 2px white inset;
+  cursor: pointer;
+}
 
 .thumbnail img {
   width: 100%;
