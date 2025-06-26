@@ -156,9 +156,9 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: rgba(240, 240, 239, 0.6); /* semi-transparent */
-  backdrop-filter: blur(16px); /* blur effect */
-  -webkit-backdrop-filter: blur(16px); /* for Safari */
+  background-color: rgba(240, 240, 239, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   height: auto;
   display: flex;
   align-items: center;
@@ -178,7 +178,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  grid-auto-rows: 340px; /* adjust this height as needed */
+  grid-auto-rows: 340px;
 }
 
 .thumbnail {
@@ -187,7 +187,7 @@ body {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  align-self: stretch; /* ✅ This line forces it to fill the grid row */
+  align-self: stretch;
 }
 
 .thumbnail img {
@@ -244,15 +244,19 @@ body {
   transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
+.image-modal.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 .image-modal .modal-content {
   max-width: 90vw;
   max-height: 90vh;
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-}
-
-.image-modal.show .modal-content {
-  transform: scale(1); /* zoom to normal */
+  position: relative;
+  transform: scale(1);
 }
 
 .modal-content {
@@ -261,14 +265,15 @@ body {
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
   transition: transform 0.4s ease;
-  transform: scale(0.96); /* smaller initially */
+  transform: scale(0.96);
+  position: relative;
 }
 
 .modal-close {
   position: absolute;
-  top: 32px;
-  right: 40px;
-  font-size: 40px;
+  top: 24px;
+  right: 48px;
+  font-size: 32px;
   color: white;
   font-weight: bold;
   cursor: pointer;
@@ -276,10 +281,65 @@ body {
   user-select: none;
 }
 
-.image-modal.show {
-  opacity: 1;
-  visibility: visible;
+/* === Gallery Pagination === */
+.gallery-pagination {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.gallery-pagination button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.gallery-pagination button.active {
+  background-color: white;
+}
+
+/* === Modal Arrows === */
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.gallery-nav button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   pointer-events: auto;
+  padding: 0;
+}
+
+.gallery-nav button:first-child {
+  left: 48px;
+}
+
+.gallery-nav button:last-child {
+  right: 48px;
 }
 
 /* === Responsive Styles === */
@@ -289,16 +349,6 @@ body {
   }
 
   .work-bar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: rgba(240, 240, 239, 0.6); /* semi-transparent */
-    backdrop-filter: blur(16px); /* blur effect */
-    -webkit-backdrop-filter: blur(16px); /* for Safari */
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 16px 24px;
   }
 
@@ -312,7 +362,6 @@ body {
   }
 }
 
-/* ≤ 768px */
 @media (max-width: 640px) {
   body {
     font-size: 12px;
@@ -328,25 +377,10 @@ body {
   }
 
   .work-bar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: rgba(240, 240, 239, 0.6); /* semi-transparent */
-    backdrop-filter: blur(16px); /* blur effect */
-    -webkit-backdrop-filter: blur(16px); /* for Safari */
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 16px 16px;
   }
 
-  .back-Button {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
-  }
-
+  .back-Button,
   .share-Button {
     width: 48px;
     height: 48px;
@@ -354,10 +388,9 @@ body {
   }
 
   .thumbnail-grid {
-    display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 16px;
-    grid-auto-rows: 340px; /* adjust this height as needed */
+    grid-auto-rows: 340px;
   }
 
   .thumbnail-tags {
@@ -368,5 +401,25 @@ body {
   #toast {
     min-width: 75%;
     font-size: 12px;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+    user-select: none;
+  }
+
+  .gallery-nav button:first-child {
+    left: 32px;
+  }
+
+  .gallery-nav button:last-child {
+    right: 32px;
   }
 }
