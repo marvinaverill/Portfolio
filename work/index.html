@@ -21,9 +21,34 @@
     />
   </head>
   <body>
-    <!-- Image Modal -->
-    <div id="imageModal" class="image-modal">
+    <div
+      id="imageModal"
+      class="image-modal"
+      onclick="handleBackdropClick(event)"
+    >
+      <span class="modal-close" onclick="closeModal()">&times;</span>
       <img class="modal-content" id="modalImage" />
+    </div>
+
+    <div
+      id="galleryModal"
+      class="image-modal"
+      onclick="handleBackdropClick(event)"
+    >
+      <span class="modal-close" onclick="closeGallery()">&times;</span>
+      <img id="galleryImage" class="modal-content" />
+      <div class="gallery-nav">
+        <button onclick="prevImage()">
+          <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+            <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+          </svg>
+        </button>
+        <button onclick="nextImage()">
+          <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+            <path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+          </svg>
+        </button>
+      </div>
     </div>
 
     <!-- Top Bar -->
@@ -58,7 +83,10 @@
           </div>
         </div>
 
-        <div class="thumbnail" onclick="openModal('../samples/Sevenx.png')">
+        <div
+          class="thumbnail"
+          onclick="openGallery(['../samples/Sevenx.png', '../samples/Koffi.png'])"
+        >
           <img src="../samples/Sevenx.png" alt="Thumbnail" />
           <div class="thumbnail-tags">
             <span class="tags-label">Web graphic design</span>
@@ -223,25 +251,75 @@
             });
         });
 
+        // === Single Image Modal ===
         function openModal(src) {
           const modal = document.getElementById("imageModal");
           const modalImg = document.getElementById("modalImage");
           modalImg.src = src;
-          modal.classList.add("show"); // 👈 Show the modal with fade-in
+          modal.classList.add("show");
         }
 
         function closeModal() {
-          const modal = document.getElementById("imageModal");
-          modal.classList.remove("show"); // 👈 Trigger fade-out
+          document.getElementById("imageModal").classList.remove("show");
         }
 
-        // Close modal when clicking outside image
-        window.addEventListener("click", function (e) {
-          const modal = document.getElementById("imageModal");
-          if (e.target === modal) {
-            modal.classList.remove("show");
-          }
+        // === Gallery Modal ===
+        let galleryImages = [];
+        let currentIndex = 0;
+
+        function openGallery(images) {
+          const modal = document.getElementById("galleryModal");
+          const img = document.getElementById("galleryImage");
+
+          galleryImages = images;
+          currentIndex = 0;
+          img.src = galleryImages[currentIndex];
+          modal.classList.add("show");
+        }
+
+        function closeGallery() {
+          document.getElementById("galleryModal").classList.remove("show");
+        }
+
+        function nextImage() {
+          if (galleryImages.length <= 1) return;
+          currentIndex = (currentIndex + 1) % galleryImages.length;
+          document.getElementById("galleryImage").src =
+            galleryImages[currentIndex];
+        }
+
+        function prevImage() {
+          if (galleryImages.length <= 1) return;
+          currentIndex =
+            (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+          document.getElementById("galleryImage").src =
+            galleryImages[currentIndex];
+        }
+
+        // === Swipe support for mobile ===
+        let startX = 0;
+        const galleryModal = document.getElementById("galleryModal");
+
+        galleryModal.addEventListener("touchstart", function (e) {
+          startX = e.touches[0].clientX;
         });
+
+        galleryModal.addEventListener("touchend", function (e) {
+          const endX = e.changedTouches[0].clientX;
+          if (startX - endX > 50) nextImage(); // swipe left
+          else if (endX - startX > 50) prevImage(); // swipe right
+        });
+
+        function handleBackdropClick(e) {
+          // Close modal only if clicking the backdrop (not image or buttons)
+          if (e.target.classList.contains("image-modal")) {
+            if (e.currentTarget.id === "imageModal") {
+              closeModal();
+            } else if (e.currentTarget.id === "galleryModal") {
+              closeGallery();
+            }
+          }
+        }
       </script>
 
       <div class="footer-text">🛠️ Crafting more magic behind the scenes ✨</div>
