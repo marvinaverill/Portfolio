@@ -4,6 +4,7 @@
 a {
   text-decoration: none;
 }
+
 .gradient-bg {
   position: fixed;
   bottom: 0;
@@ -23,6 +24,7 @@ a {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -58,6 +60,7 @@ html {
     transform: none;
     transition: none;
   }
+
   html {
     scroll-behavior: auto;
   }
@@ -164,13 +167,11 @@ html {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
   }
+
   100% {
     opacity: 0;
-    transform: translate(
-        calc(-50% + var(--dx, 0)),
-        calc(-50% + var(--dy, 0))
-      )
-      scale(0.2);
+    transform: translate(calc(-50% + var(--dx, 0)),
+        calc(-50% + var(--dy, 0))) scale(0.2);
   }
 }
 
@@ -183,11 +184,9 @@ html {
   right: -120px;
   top: -120px;
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(33, 33, 33, 0.06),
-    transparent 70%
-  );
+  background: radial-gradient(circle,
+      rgba(33, 33, 33, 0.06),
+      transparent 70%);
   filter: blur(40px);
   pointer-events: none;
   z-index: -1;
@@ -195,9 +194,12 @@ html {
 }
 
 @keyframes heroFloat {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(0, 0) scale(1);
   }
+
   50% {
     transform: translate(-80px, 60px) scale(1.1);
   }
@@ -282,6 +284,7 @@ html {
   color: #4a4a4a;
 }
 
+/* === Hero card — Tablet === */
 @media (max-width: 1024px) {
   .desktop-only {
     display: none;
@@ -295,21 +298,26 @@ html {
     column-gap: 24px;
     padding: 32px;
   }
+
   .hero-info {
     display: contents;
   }
+
   .hero-role {
     grid-column: 1 / -1;
   }
+
   .hero-name {
     grid-column: 1 / -1;
     font-size: 44px;
   }
+
   .hero-description {
     grid-column: 1 / -1;
     font-size: 15px;
     margin: 8px 0 12px;
   }
+
   .hero-card .hero-cta.button-style {
     grid-column: 1;
     display: inline-block;
@@ -319,6 +327,7 @@ html {
     padding: 14px 32px !important;
     margin-top: 0 !important;
   }
+
   .hero-socials {
     grid-column: 2;
     flex-direction: row;
@@ -326,12 +335,14 @@ html {
     justify-self: end;
     gap: 12px;
   }
+
   .hero-socials .small-icons img {
     width: 36px;
     height: 36px;
   }
 }
 
+/* === Hero card — Mobile === */
 @media (max-width: 640px) {
   .hero-card {
     display: flex;
@@ -340,11 +351,13 @@ html {
     padding: 18px;
     gap: 16px;
   }
+
   .hero-info {
     display: flex;
     flex-direction: column;
     gap: 12px;
   }
+
   .hero-role,
   .hero-name,
   .hero-description,
@@ -352,20 +365,25 @@ html {
     grid-column: auto;
     grid-row: auto;
   }
+
   .hero-role {
     font-size: 12px;
   }
+
   .hero-name {
     font-size: 32px;
   }
+
   .hero-description {
     font-size: 14px;
     margin: 8px 0 0;
   }
+
   .hero-socials .small-icons img {
     width: 32px;
     height: 32px;
   }
+
   .hero-card .hero-cta.button-style {
     grid-column: auto;
     padding: 14px 24px !important;
@@ -377,6 +395,7 @@ html {
     box-sizing: border-box;
     margin-top: 8px !important;
   }
+
   .hero-socials {
     flex-direction: row;
     align-self: center;
@@ -387,11 +406,13 @@ html {
   .bottom-content {
     grid-template-columns: 1fr;
   }
+
   .info-box,
   .case-box,
   .work-box {
     height: 300px;
   }
+
   .work-box {
     grid-column: auto;
   }
@@ -743,11 +764,13 @@ html {
   .bottom-content {
     grid-template-columns: 1fr;
   }
+
   .info-box,
   .case-box,
   .work-box {
     height: 300px;
   }
+
   .work-box {
     grid-column: auto;
   }
@@ -756,285 +779,9 @@ html {
 /* ===================== */
 /* === Mobile (≤ 640px) === */
 /* ===================== */
-/* ===================== */
-/* === Mobile (≤ 640px) === */
-/* ===================== */
 @media (max-width: 640px) {
   .main-content {
     padding: 16px 16px 48px;
-  }
-
-  .portfolio-text {
-    font-size: 12px;
-  }
-
-  .logo-icon {
-    height: 20px;
-  }
-
-  .hero-section {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-  }
-
-  .marvin-text {
-    font-size: 80px;
-    margin-bottom: -8px;
-  }
-
-  .averill-text {
-    font-size: 32px;
-  }
-
-  .face-icon {
-    height: 48px;
-  }
-
-  .social-icons {
-    gap: 12px;
-  }
-
-  .icon-circle {
-    width: 24px;
-    height: 24px;
-  }
-
-  .description-text {
-    font-size: 12px;
-  }
-
-  /* Keep original desktop button style */
-  .button-style {
-    display: inline-block;
-    width: auto !important;
-    padding: 16px 40px;
-    background-color: #212121;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-    border: none;
-    border-radius: 56px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    align-self: flex-start;
-    font-family: "Karla", sans-serif;
-  }
-
-  .button-style:hover {
-    background-color: #4a4a4a;
-    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.4),
-      0 8px 16px rgba(0, 0, 0, 0.12);
-    transition: 0.4s ease;
-  }
-
-  .seperator-line img {
-    width: 100%;
-    object-fit: contain;
-  }
-
-  .bottom-content {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .info-box,
-  .case-box,
-  .work-box {
-    height: 280px !important;
-    padding: 16px;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .fill-image-absolute {
-    width: 105%;
-    height: 105%;
-    object-fit: cover;
-    position: absolute;
-    top: 0px;
-    left: 0;
-    pointer-events: none;
-  }
-
-  .box-label,
-  .title-label {
-    font-size: 16px;
-  }
-
-  .tags-label {
-    font-size: 10px;
-    padding: 6px 10px;
-  }
-
-  .tags-below {
-    flex-wrap: wrap;
-  }
-
-  .arrow-button {
-    width: 32px;
-    height: 32px;
-  }
-
-  .arrow-button img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-}
-/* ===================== */
-/* === Mobile (≤ 640px) === */
-/* ===================== */
-@media (max-width: 640px) {
-  .main-content {
-    padding: 16px 16px 48px;
-  }
-
-  .portfolio-text {
-    font-size: 12px;
-  }
-
-  .logo-icon {
-    height: 20px;
-  }
-
-  .hero-section {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-  }
-
-  .marvin-text {
-    font-size: 80px;
-    margin-bottom: -8px;
-  }
-
-  .averill-text {
-    font-size: 32px;
-  }
-
-  .face-icon {
-    height: 48px;
-  }
-
-  .social-icons {
-    gap: 12px;
-  }
-
-  .icon-circle {
-    width: 24px;
-    height: 24px;
-  }
-
-  .description-text {
-    font-size: 12px;
-  }
-
-  /* Keep original desktop button style */
-  .button-style {
-    display: inline-block;
-    width: auto !important;
-    padding: 16px 40px;
-    background-color: #212121;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-    border: none;
-    border-radius: 56px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    align-self: flex-start;
-    font-family: "Karla", sans-serif;
-  }
-
-  .button-style:hover {
-    background-color: #4a4a4a;
-    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.4),
-      0 8px 16px rgba(0, 0, 0, 0.12);
-    transition: 0.4s ease;
-  }
-
-  .seperator-line img {
-    width: 100%;
-    object-fit: contain;
-  }
-
-  .bottom-content {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .info-box,
-  .case-box,
-  .work-box {
-    height: 280px !important;
-    padding: 16px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-  }
-
-  .fill-image-absolute {
-    width: 105%;
-    height: 105%;
-    object-fit: cover;
-    position: absolute;
-    top: 0px;
-    left: 0;
-    pointer-events: none;
-  }
-
-  .box-label,
-  .title-label {
-    font-size: 16px;
-  }
-
-  .tags-label {
-    font-size: 10px;
-    padding: 4px 8px;
-  }
-
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    max-width: 70%;
-  }
-
-  .tags-below {
-    flex-wrap: wrap;
-    gap: 12px;
-    max-height: 80px;
-    overflow: hidden;
-  }
-
-  .arrow-button {
-    width: 32px;
-    height: 32px;
-  }
-
-  .arrow-button img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-}
-/* ===================== */
-/* === Mobile (≤ 640px) === */
-/* ===================== */
-/* ===================== */
-/* === Mobile (≤ 640px) === */
-/* ===================== */
-/* ===================== */
-/* === Mobile (≤ 640px) === */
-/* ===================== */
-@media (max-width: 640px) {
-  .main-content {
-    padding: 16px;
     gap: 32px;
   }
 
@@ -1107,11 +854,6 @@ html {
 
   .seperator-line img {
     width: 100%;
-    object-fit: contain;
-  }
-
-  .seperator-line img {
-    width: 100%;
     height: auto;
     object-fit: contain;
     display: block;
@@ -1121,7 +863,6 @@ html {
   .bottom-content {
     flex-direction: column;
     gap: 16px;
-    height: 500px;
   }
 
   .info-box,
