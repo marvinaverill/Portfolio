@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FUHH.IO — Case study</title>
+    <link rel="stylesheet" href="casestyle.css?v=3" />
+    <link rel="stylesheet" href="../css/animate.min.css" />
+    <link rel="icon" href="../assets/marvinLogo.svg" type="image/svg+xml" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Karla:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="work-bar">
+      <a href="index.html">
+        <div class="back-Button">
+          <img src="../assets/backButton.svg" alt="back" class="back-Button" />
+        </div>
+      </a>
+      <div class="title-description">
+        <div class="title-label">FUHH.IO</div>
+      </div>
+      <div class="back-Button" id="copyButton">
+        <img src="../assets/shareButton.svg" alt="share" class="share-Button" />
+      </div>
+      <div id="toast">⭐ Link copied! Now go spam your friends 💬</div>
+    </div>
+
+    <div class="main-content animate__animated animate__fadeInUp">
+      <article class="case-detail">
+        <img
+          src="../samples/Marvinaverill.png"
+          alt="FUHH.IO cover"
+          class="case-cover"
+        />
+
+        <div class="case-body">
+          <div class="case-meta">
+            <span>UI/UX</span><span>·</span>
+            <span>2025</span>
+          </div>
+          <h1 class="case-title">
+            <a
+              href="https://fuhh.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >FUHH.IO — Crafting a crisp brand and product UI</a
+            >
+          </h1>
+          <p class="case-lead">
+            Defined the visual identity, marketing site, and in-product
+            experience for a SaaS tool — so everything from first click to
+            daily use feels like one product.
+          </p>
+
+          <div class="case-section" data-reveal>
+            <h3>Problem</h3>
+            <p>
+              The team had strong engineering but no coherent brand. The
+              landing page, dashboard, and onboarding all looked like they
+              came from different products, which eroded trust during
+              evaluation and complicated release storytelling.
+            </p>
+          </div>
+
+          <div class="case-section" data-reveal>
+            <h3>Approach</h3>
+            <p>
+              Built a minimal design system grounded in typography and
+              spacing, then extended it across the marketing site, app
+              shell, and email. Worked alongside the founder to tighten the
+              product narrative and reduce onboarding to three essential
+              steps.
+            </p>
+          </div>
+
+          <img
+            src="../samples/Pancor.png"
+            alt="FUHH.IO product screens"
+            class="case-image"
+            data-reveal
+          />
+
+          <div class="case-section" data-reveal>
+            <h3>Outcome</h3>
+            <ul>
+              <li>Trial sign-up conversion up 52%</li>
+              <li>Onboarding completion lifted from 34% → 71%</li>
+              <li>Single design system now powers every surface</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <script src="../assets/reveal.js" defer></script>
+    <script>
+      (function () {
+        const button = document.getElementById("copyButton");
+        const toast = document.getElementById("toast");
+        if (!button || !toast) return;
+        button.addEventListener("click", () => {
+          navigator.clipboard.writeText(window.location.href).then(() => {
+            toast.classList.add("show");
+            setTimeout(() => toast.classList.remove("show"), 3500);
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

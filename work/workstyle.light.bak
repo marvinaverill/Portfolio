@@ -1,0 +1,430 @@
+/* === Base Styles === */
+body {
+  background: #f0f0ef;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  color: #212121;
+  padding: 0px;
+  margin: 0px;
+}
+
+@font-face {
+  font-family: "Gord Qucik";
+  src: url("../assets/GordQucik.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("../assets/Karla.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#toast {
+  visibility: hidden;
+  min-width: 120px;
+  background-color: #212121;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 12px;
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+#toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.main-content {
+  max-width: 2560px;
+  margin: 0 auto;
+  padding: 48px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* === Typography Utilities === */
+.font-heading,
+.title-label {
+  font-family: "Gord Qucik", sans-serif;
+}
+
+.title-label {
+  font-family: "Gord Qucik", sans-serif;
+  display: inline-block;
+  font-size: 24px;
+  color: #212121;
+}
+
+/* === Button Component === */
+.button-style {
+  display: inline-block;
+  padding: 16px 40px;
+  background-color: #212121;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 56px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Karla", sans-serif;
+  align-self: flex-start;
+}
+
+.button-style:hover {
+  background-color: #4a4a4a;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.4),
+    0 8px 16px rgba(0, 0, 0, 0.12);
+  transition: 0.4s ease;
+}
+
+/* === Tags === */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.tags-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #212121;
+  padding: 8px 12px;
+  background-color: #fff;
+  border-radius: 56px;
+  border: 1px solid #21212130;
+}
+
+.tags-below {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* === Buttons/Icons Hover === */
+.arrow-button:hover {
+  background-color: #4a4a4a;
+  box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.4);
+  border-radius: 120px;
+  opacity: 0.8;
+  transform: rotate(45deg);
+  transition: transform 0.4s ease;
+  object-fit: contain;
+}
+
+.back-Button:hover {
+  transform: rotate(360deg);
+  transition: transform 0.6s ease;
+  object-fit: contain;
+}
+
+.back-Button:active {
+  transition: transform 0.6s ease;
+  border-radius: 120px;
+  object-fit: contain;
+}
+
+.share-Button:hover {
+  transform: rotate(360deg);
+  transition: transform 0.6s ease;
+  object-fit: contain;
+}
+
+.share-Button:active {
+  transform: rotate(360deg);
+  transition: transform 0.6s ease;
+  border-radius: 120px;
+  object-fit: contain;
+}
+
+/* === Header === */
+.work-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(240, 240, 239, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+
+/* === Title Description === */
+.title-description {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Thumbnail Grid === */
+.thumbnail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  grid-auto-rows: 340px;
+}
+
+.thumbnail {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  align-self: stretch;
+}
+.thumbnail:hover {
+  filter: drop-shadow(0 0 0.75rem #5f687b50);
+  border: solid 2px white inset;
+  cursor: pointer;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* === Thumbnail Tags === */
+.thumbnail-tags {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+.thumbnail-tag {
+  font-size: 12px;
+  font-weight: 600;
+  color: #212121;
+  padding: 6px 12px;
+  background-color: #f5f5f5;
+  border-radius: 56px;
+  border: 1px solid #ccc;
+}
+
+/* === Footer === */
+.footer-text {
+  display: flex;
+  justify-content: center;
+}
+
+/* === Image Modal === */
+.image-modal {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  display: flex;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.image-modal.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.image-modal .modal-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  position: relative;
+  transform: scale(1);
+}
+
+.modal-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease;
+  transform: scale(0.96);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 24px;
+  right: 48px;
+  font-size: 32px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+  user-select: none;
+}
+
+/* === Gallery Pagination === */
+.gallery-pagination {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.gallery-pagination button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.gallery-pagination button.active {
+  background-color: white;
+}
+
+/* === Modal Arrows === */
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.gallery-nav button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  padding: 0;
+}
+
+.gallery-nav button:first-child {
+  left: 48px;
+}
+
+.gallery-nav button:last-child {
+  right: 48px;
+}
+
+/* === Responsive Styles === */
+@media (max-width: 1024px) {
+  .main-content {
+    padding: 24px;
+  }
+
+  .work-bar {
+    padding: 16px 24px;
+  }
+
+  .thumbnail-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .thumbnail-tags {
+    bottom: 16px;
+    left: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 12px;
+  }
+
+  .main-content {
+    padding: 16px;
+  }
+
+  .title-label {
+    font-size: 16px;
+    justify-content: center;
+  }
+
+  .work-bar {
+    padding: 16px 16px;
+  }
+
+  .back-Button,
+  .share-Button {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+
+  .thumbnail-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+    grid-auto-rows: 340px;
+  }
+
+  .thumbnail-tags {
+    bottom: 16px;
+    left: 16px;
+  }
+
+  #toast {
+    min-width: 75%;
+    font-size: 12px;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+    user-select: none;
+  }
+
+  .gallery-nav button:first-child {
+    left: 32px;
+  }
+
+  .gallery-nav button:last-child {
+    right: 32px;
+  }
+}

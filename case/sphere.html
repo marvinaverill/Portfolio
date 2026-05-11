@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sphere — Case study</title>
+    <link rel="stylesheet" href="casestyle.css?v=3" />
+    <link rel="stylesheet" href="../css/animate.min.css" />
+    <link rel="icon" href="../assets/marvinLogo.svg" type="image/svg+xml" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Karla:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="work-bar">
+      <a href="index.html">
+        <div class="back-Button">
+          <img src="../assets/backButton.svg" alt="back" class="back-Button" />
+        </div>
+      </a>
+      <div class="title-description">
+        <div class="title-label">SPHERE</div>
+      </div>
+      <div class="back-Button" id="copyButton">
+        <img src="../assets/shareButton.svg" alt="share" class="share-Button" />
+      </div>
+      <div id="toast">⭐ Link copied! Now go spam your friends 💬</div>
+    </div>
+
+    <div class="main-content animate__animated animate__fadeInUp">
+      <article class="case-detail">
+        <img
+          src="../samples/Spritzy.png"
+          alt="Sphere cover"
+          class="case-cover"
+        />
+
+        <div class="case-body">
+          <div class="case-meta">
+            <span>UI/UX</span><span>·</span>
+            <span>2026</span>
+          </div>
+          <h1 class="case-title">
+            <a
+              href="https://sphere.123rf.ai/?utm_source=123rf_homepage&utm_medium=cta&utm_campaign=123rf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Sphere — Rethinking ad creation end-to-end</a
+            >
+          </h1>
+          <p class="case-lead">
+            A full-scale marketing platform that replaces five fragmented
+            tools with a single, production-ready workspace for planning,
+            creating, and shipping ads.
+          </p>
+
+          <div class="case-section" data-reveal>
+            <h3>Problem</h3>
+            <p>
+              Marketers were switching between brief docs, stock search,
+              design tools, and approval workflows — often rebuilding the
+              same ad in three places. Average turnaround for a single
+              campaign stretched past ten working days.
+            </p>
+          </div>
+
+          <div class="case-section" data-reveal>
+            <h3>Approach</h3>
+            <p>
+              Interviewed nine marketing teams to map the real flow,
+              prototyped three unified layouts, and aligned with engineering
+              on a modular canvas that could absorb future tools. Delivered
+              design tokens, motion specs, and a handoff playbook.
+            </p>
+          </div>
+
+          <img
+            src="../samples/Koffi2.png"
+            alt="Sphere flow"
+            class="case-image"
+            data-reveal
+          />
+
+          <div class="case-section" data-reveal>
+            <h3>Outcome</h3>
+            <ul>
+              <li>Campaign turnaround cut from 10 days → 3 days</li>
+              <li>Cross-team handoffs reduced by 62%</li>
+              <li>Adopted as the default creator for all new campaigns</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <script src="../assets/reveal.js" defer></script>
+    <script>
+      (function () {
+        const button = document.getElementById("copyButton");
+        const toast = document.getElementById("toast");
+        if (!button || !toast) return;
+        button.addEventListener("click", () => {
+          navigator.clipboard.writeText(window.location.href).then(() => {
+            toast.classList.add("show");
+            setTimeout(() => toast.classList.remove("show"), 3500);
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marvin Averill | Portfolio</title>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+
+    <link rel="stylesheet" href="animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="icon" href="assets/marvinLogo.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/favicon.png" type="image/png" sizes="32x32" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Karla:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main-content">
+      <!-- Top Bar -->
+      <div class="top-bar">
+        <div class="portfolio-text">portfolio @2026</div>
+        <img src="assets/logo.svg" alt="Logo" class="logo-icon" />
+      </div>
+
+      <!-- Hero Section -->
+      <section class="hero-card animate__animated animate__fadeIn" id="heroCard">
+        <div class="hero-info">
+          <div class="hero-role">Senior UI/UX Designer</div>
+          <h1
+            class="hero-name"
+            id="hero-name"
+            data-text="Marvin Averill Ledwin"
+          ></h1>
+          <p class="hero-description">
+            With 3+ years of experience in UI/UX design, I specialize in
+            creative problem-solving and crafting meaningful digital
+            solutions.<br class="desktop-only" />
+            Always looking to grow and apply forward-thinking strategies
+            that elevate every project.
+          </p>
+
+          <a
+            href="https://api.whatsapp.com/send/?phone=628116327333&text=Hi+Marvin%2C+I%27d+like+to+inquire+about+your+design+services+for..."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button-style hero-cta"
+          >
+            Reach me out!
+          </a>
+        </div>
+
+        <div class="hero-socials">
+          <a
+            class="small-icons"
+            href="https://www.behance.net/marvinaverill"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="assets/behance.svg" alt="Behance" />
+          </a>
+          <a
+            class="small-icons"
+            href="https://www.linkedin.com/in/marvinaverill/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="assets/linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a
+            class="small-icons"
+            href="https://medium.com/@marvinaverill"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="assets/medium.svg" alt="medium" />
+          </a>
+          <a
+            class="small-icons"
+            href="https://api.whatsapp.com/send/?phone=628116327333&text=Hi+Marvin%2C+I%27d+like+to+inquire+about+your+design+services+for..."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="assets/whatsapp.svg" alt="WhatsApp" />
+          </a>
+          <a
+            class="small-icons"
+            href="mailto:marvin.avl16@gmail.com?subject=Design%20Inquiry&body=Hi%20Marvin%2C%20I%27d%20like%20to%20inquire%20about%20your%20design%20services%20for..."
+          >
+            <img src="assets/gmail.svg" alt="Gmail" />
+          </a>
+        </div>
+      </section>
+
+      <script>
+        (function () {
+          const el = document.getElementById("hero-name");
+          const text = el.dataset.text || "";
+          let i = 0;
+          function type() {
+            if (i < text.length) {
+              el.textContent += text.charAt(i++);
+              setTimeout(type, 80);
+            } else {
+              el.classList.add("done");
+              setTimeout(() => {
+                el.textContent = "";
+                el.classList.remove("done");
+                i = 0;
+                type();
+              }, 30000);
+            }
+          }
+          type();
+
+          const card = document.getElementById("heroCard");
+          const colors = [
+            "#ff6b6b",
+            "#ffd93d",
+            "#6bcf7f",
+            "#4d96ff",
+            "#b088f9",
+            "#ff8fab",
+            "#ffa94d",
+          ];
+          let lastSpawn = 0;
+
+          card.addEventListener("mousemove", (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            card.style.setProperty("--mx", `${x}px`);
+            card.style.setProperty("--my", `${y}px`);
+
+            const now = Date.now();
+            if (now - lastSpawn < 35) return;
+            lastSpawn = now;
+
+            const spark = document.createElement("span");
+            spark.className = "spark";
+            spark.style.left = x + "px";
+            spark.style.top = y + "px";
+            spark.style.background =
+              colors[Math.floor(Math.random() * colors.length)];
+            const angle = Math.random() * Math.PI * 2;
+            const distance = 30 + Math.random() * 70;
+            spark.style.setProperty(
+              "--dx",
+              Math.cos(angle) * distance + "px"
+            );
+            spark.style.setProperty(
+              "--dy",
+              Math.sin(angle) * distance + "px"
+            );
+            const size = 4 + Math.random() * 8;
+            spark.style.width = size + "px";
+            spark.style.height = size + "px";
+            card.appendChild(spark);
+            setTimeout(() => spark.remove(), 950);
+          });
+        })();
+      </script>
+
+      <div class="seperator-line" data-reveal>
+        <img src="assets/Seperator.svg" alt="seperator" />
+      </div>
+
+      <div class="bottom-content">
+        <div
+          class="info-box"
+          onclick="location.href='about/index.html'"
+          style="cursor: pointer"
+          data-reveal
+        >
+          <img
+            src="assets/Gemini_Generated_Image_fv5sn5fv5sn5fv5s.png"
+            alt="Personal information"
+            class="fill-image-absolute"
+          />
+          <div class="box-label">Personal information</div>
+          <div class="tags-below">
+            <div class="tags">
+              <span class="tags-label">About me</span>
+              <span class="tags-label">Resume</span>
+            </div>
+
+            <a href="about/index.html" class="arrow-button">
+              <img src="assets/arrowButton.svg" alt="arrow" />
+            </a>
+          </div>
+        </div>
+
+        <!--
+        <div
+          class="case-box"
+          onclick="location.href='case/index.html'"
+          style="cursor: pointer"
+          data-reveal
+          data-reveal-delay="100"
+        >
+          <img
+            src="assets/196667843_m.jpg"
+            alt="Case studies"
+            class="fill-image-absolute"
+          />
+          <div class="box-label">Case studies</div>
+          <div class="tags-below">
+            <div class="tags">
+              <span class="tags-label">Sphere</span>
+              <span class="tags-label">Blieve.ai</span>
+              <span class="tags-label">FUHH.IO</span>
+            </div>
+
+            <a href="case/index.html" class="arrow-button">
+              <img src="assets/arrowButton.svg" alt="arrow" />
+            </a>
+          </div>
+        </div>
+        -->
+
+
+        <div
+          class="work-box"
+          onclick="location.href='work/index.html'"
+          style="cursor: pointer"
+          data-reveal
+          data-reveal-delay="200"
+        >
+          <img src="assets/WorkBG.png" alt="Work" class="fill-image-absolute" />
+          <div class="box-label">Work compilation</div>
+          <div class="tags-below">
+            <div class="tags">
+              <span class="tags-label">UI/UX</span>
+              <span class="tags-label">Poster</span>
+              <span class="tags-label">Logo</span>
+              <span class="tags-label">Motion</span>
+            </div>
+
+            <a href="work/index.html" class="arrow-button">
+              <img src="assets/arrowButton.svg" alt="arrow" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/reveal.js" defer></script>
+  </body>
+</html>

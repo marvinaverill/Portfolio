@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blieve.ai — Case study</title>
+    <link rel="stylesheet" href="casestyle.css?v=3" />
+    <link rel="stylesheet" href="../css/animate.min.css" />
+    <link rel="icon" href="../assets/marvinLogo.svg" type="image/svg+xml" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Karla:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      id="imageModal"
+      class="image-modal"
+      onclick="handleBackdropClick(event)"
+    >
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage" alt="" />
+    </div>
+
+    <div class="work-bar">
+      <a href="index.html">
+        <div class="back-Button">
+          <img src="../assets/backButton.svg" alt="back" class="back-Button" />
+        </div>
+      </a>
+      <div class="title-description">
+        <div class="title-label">BLIEVE.AI</div>
+      </div>
+      <div class="back-Button" id="copyButton">
+        <img src="../assets/shareButton.svg" alt="share" class="share-Button" />
+      </div>
+      <div id="toast">⭐ Link copied! Now go spam your friends 💬</div>
+    </div>
+
+    <div class="main-content animate__animated animate__fadeInUp">
+      <article class="case-pro">
+        <img
+          src="../samples/blieve-cover.png"
+          alt="Blieve.ai cover"
+          class="case-pro-cover"
+        />
+
+        <div class="case-pro-body">
+          <!-- Intro -->
+          <section class="case-pro-intro" data-reveal>
+            <div class="case-pro-intro-label">UI/UX • 2025</div>
+            <h1 class="case-pro-title">
+              <a
+                href="https://www.blieve.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Blieve.ai — A single home for eleven AI tools</a
+              >
+            </h1>
+            <p class="case-pro-lead">
+              Blieve.ai is an all-in-one AI platform where users can generate
+              images, turn them into videos, and edit everything in one place.
+              Built for creators and marketers who want fast output without
+              jumping between tools.
+            </p>
+          </section>
+
+          <!-- Meta -->
+          <section class="case-pro-meta-grid" data-reveal>
+            <div class="case-pro-meta-card">
+              <svg
+                class="case-pro-meta-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <div class="case-pro-meta-text">
+                <span class="case-pro-meta-label">Duration</span>
+                <span class="case-pro-meta-value">3 months</span>
+              </div>
+            </div>
+
+            <div class="case-pro-meta-card">
+              <svg
+                class="case-pro-meta-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                <polyline points="2 17 12 22 22 17" />
+                <polyline points="2 12 12 17 22 12" />
+              </svg>
+              <div class="case-pro-meta-text">
+                <span class="case-pro-meta-label">Scope</span>
+                <span class="case-pro-meta-value">End-to-end</span>
+              </div>
+            </div>
+
+            <div class="case-pro-meta-card">
+              <svg
+                class="case-pro-meta-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+              <div class="case-pro-meta-text">
+                <span class="case-pro-meta-label">Platform</span>
+                <span class="case-pro-meta-value">Web SaaS</span>
+              </div>
+            </div>
+          </section>
+
+        <!-- Background -->
+        <section id="background" class="case-pro-section" data-reveal>
+          <h2>Background</h2>
+          <div class="case-pro-narrow">
+            <p>
+              Blieve.ai is an all-in-one AI platform that combines multiple
+              tools into a single experience. Users can generate images, turn
+              them into videos, and edit everything in one place.
+            </p>
+            <p class="case-pro-callout">
+              The goal is simple: reduce the need to jump between different
+              tools and make content creation faster.
+            </p>
+          </div>
+        </section>
+
+        <!-- Problem -->
+        <section id="problem" class="case-pro-section" data-reveal>
+          <h2>Problem</h2>
+          <div class="case-pro-narrow">
+            <p>Even with AI, the workflow is still fragmented.</p>
+            <p>Users often:</p>
+            <ul>
+              <li>Generate images in one tool</li>
+              <li>Edit in another</li>
+              <li>Then switch again for video</li>
+            </ul>
+            <p class="case-pro-callout">
+              This creates unnecessary steps, slows everything down, and
+              increases friction, especially for non-designers.
+            </p>
+          </div>
+        </section>
+
+        <!-- Solution -->
+        <section id="solution" class="case-pro-section" data-reveal>
+          <h2>Solution</h2>
+          <div class="case-pro-narrow">
+            <p>
+              Instead of building separate tools, I focused on creating one
+              connected flow.
+            </p>
+            <p>Users can:</p>
+            <ul>
+              <li>Start with a prompt</li>
+              <li>Generate content</li>
+              <li>Refine and edit</li>
+              <li>Convert to video</li>
+              <li>Export</li>
+            </ul>
+            <p class="case-pro-callout">
+              All in a single workflow without leaving the platform.
+            </p>
+          </div>
+        </section>
+
+        <!-- Discovery -->
+        <section id="discovery" class="case-pro-section" data-reveal>
+          <h2>Discovery</h2>
+          <div class="case-pro-narrow">
+            <p>I looked at how existing AI tools are being used.</p>
+            <p>Most platforms are:</p>
+            <ul>
+              <li>Feature-heavy but disconnected</li>
+              <li>Powerful but not beginner-friendly</li>
+              <li>Focused on output, not workflow</li>
+            </ul>
+            <p class="case-pro-callout">
+              The biggest gap wasn't capability, it was
+              <strong>how everything connects together</strong>.
+            </p>
+          </div>
+        </section>
+
+        <!-- Research -->
+        <section id="research" class="case-pro-section" data-reveal>
+          <h2>Research</h2>
+          <div class="case-pro-narrow">
+            <p>Focused on understanding user behavior:</p>
+            <ul>
+              <li>Users don't think in "tools", they think in outcomes</li>
+              <li>
+                Most users just want to go from idea → final output quickly
+              </li>
+              <li>Too many options early creates confusion</li>
+            </ul>
+            <p class="case-pro-callout">
+              Key insight: simplicity in structure matters more than adding
+              more features.
+            </p>
+          </div>
+        </section>
+
+        <!-- Exploration -->
+        <section id="exploration" class="case-pro-section" data-reveal>
+          <h2>Exploration</h2>
+          <div class="case-pro-narrow">
+            <p>
+              Explored multiple directions before finalizing the structure:
+            </p>
+            <ul>
+              <li>Tool-based layout vs flow-based layout</li>
+              <li>Sidebar navigation vs top navigation</li>
+              <li>Split preview vs single canvas</li>
+            </ul>
+            <p>
+              Tested different ways to reduce decision-making and make the
+              experience feel more guided.
+            </p>
+          </div>
+
+          <div class="case-pro-iteration-row">
+            <div class="case-pro-grid-2">
+              <div class="case-pro-compare-block">
+                <span class="case-pro-compare-tag">Version A</span>
+                <p>Tool-based layout</p>
+              </div>
+              <div class="case-pro-compare-block">
+                <span class="case-pro-compare-tag">Version B</span>
+                <p>Flow-based layout</p>
+              </div>
+            </div>
+            <p class="case-pro-iteration-decision">
+              <strong>Decision:</strong> Chose flow-based for a guided
+              experience.
+            </p>
+          </div>
+          <div class="case-pro-iteration-row">
+            <div class="case-pro-grid-2">
+              <div class="case-pro-compare-block">
+                <span class="case-pro-compare-tag">Version A</span>
+                <p>Sidebar navigation</p>
+              </div>
+              <div class="case-pro-compare-block">
+                <span class="case-pro-compare-tag">Version B</span>
+                <p>Top navigation</p>
+              </div>
+            </div>
+            <p class="case-pro-iteration-decision">
+              <strong>Decision:</strong> Chose sidebar for clarity.
+            </p>
+          </div>
+          <div class="case-pro-iteration-row">
+            <div class="case-pro-grid-2">
+              <div class="case-pro-compare-block">
+                <span class="case-pro-compare-tag">Version A</span>
+                <p>Split preview</p>
+              </div>
+              <div class="case-pro-compare-block">
+                <span class="case-pro-compare-tag">Version B</span>
+                <p>Single canvas</p>
+              </div>
+            </div>
+            <p class="case-pro-iteration-decision">
+              <strong>Decision:</strong> Chose single canvas for focus.
+            </p>
+          </div>
+
+          <div class="case-pro-narrow">
+            <p class="case-pro-callout">
+              Final direction: flow-based experience with minimal friction.
+            </p>
+          </div>
+        </section>
+
+        <!-- Design -->
+        <section id="design" class="case-pro-section" data-reveal>
+          <h2>Design</h2>
+          <div class="case-pro-narrow">
+            <p>The final design focuses on clarity and speed.</p>
+            <ul>
+              <li>Prompt-first interaction (start simple)</li>
+              <li>Central canvas for output</li>
+              <li>Side panel for controls</li>
+              <li>Progressive disclosure for advanced settings</li>
+            </ul>
+            <p class="case-pro-callout">
+              Everything is designed to reduce steps and keep users focused on
+              creating.
+            </p>
+          </div>
+          <div class="case-pro-grid-final">
+            <img src="../samples/Motion.png" alt="Final UI 1" class="case-pro-final-img" />
+            <img src="../samples/3D.png" alt="Final UI 2" class="case-pro-final-img" />
+            <img src="../samples/Marvinaverill.png" alt="Final UI 3" class="case-pro-final-img" />
+            <img src="../samples/Spritzy.png" alt="Final UI 4" class="case-pro-final-img" />
+            <img src="../samples/Showreel.png" alt="Final UI 5" class="case-pro-final-img" />
+            <img src="../samples/Koffi2.png" alt="Final UI 6" class="case-pro-final-img" />
+            <img src="../samples/Koffi1.png" alt="Final UI 7" class="case-pro-final-img" />
+            <img src="../samples/Koffi3.png" alt="Final UI 8" class="case-pro-final-img" />
+            <img src="../samples/NSK.png" alt="Final UI 9" class="case-pro-final-img" />
+            <img src="../samples/PIT.png" alt="Final UI 10" class="case-pro-final-img" />
+            <img src="../samples/Sevenx3.png" alt="Final UI 11" class="case-pro-final-img" />
+            <img src="../samples/Saturdays.png" alt="Final UI 12" class="case-pro-final-img" />
+          </div>
+        </section>
+
+        <!-- Takeaway -->
+        <section id="takeaway" class="case-pro-section" data-reveal>
+          <h2>Takeaway</h2>
+          <blockquote class="case-pro-takeaway">
+            <span class="case-pro-takeaway-mark" aria-hidden="true">&ldquo;</span>
+            <div class="case-pro-takeaway-body">
+              <div class="case-pro-takeaway-content">
+                <p class="case-pro-takeaway-lead">
+                  Designing AI tools is not about adding more features, but
+                  reducing decisions.
+                </p>
+                <p>
+                  For Blieve.ai, the focus was turning multiple tools into
+                  one clear flow.
+                </p>
+                <p>Less thinking, more creating.</p>
+              </div>
+            </div>
+          </blockquote>
+        </section>
+        </div>
+      </article>
+    </div>
+
+    <nav class="case-pro-nav" id="caseProNav" aria-label="Section progress">
+      <div class="case-pro-nav-inner">
+        <a href="#background" data-target="background">Background</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#problem" data-target="problem">Problem</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#solution" data-target="solution">Solution</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#discovery" data-target="discovery">Discovery</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#research" data-target="research">Research</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#exploration" data-target="exploration">Exploration</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#design" data-target="design">Design</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#takeaway" data-target="takeaway">Takeaway</a>
+      </div>
+    </nav>
+
+    <script src="../assets/reveal.js" defer></script>
+    <script>
+      (function () {
+        const button = document.getElementById("copyButton");
+        const toast = document.getElementById("toast");
+        if (button && toast) {
+          button.addEventListener("click", () => {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+              toast.classList.add("show");
+              setTimeout(() => toast.classList.remove("show"), 3500);
+            });
+          });
+        }
+
+        const zoomables = document.querySelectorAll(
+          ".case-pro-cover, .case-pro-wire-img, .case-pro-final-img, .case-pro-block-image"
+        );
+        zoomables.forEach((img) => {
+          img.addEventListener("click", () => openModal(img.src));
+        });
+      })();
+
+      function openModal(src) {
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+        modalImg.src = src;
+        modal.classList.add("show");
+      }
+      function closeModal() {
+        document.getElementById("imageModal").classList.remove("show");
+      }
+      function handleBackdropClick(e) {
+        if (e.target.classList.contains("image-modal")) closeModal();
+      }
+
+      (function () {
+        const nav = document.getElementById("caseProNav");
+        if (!nav) return;
+        const links = nav.querySelectorAll("a");
+        const sections = Array.from(links)
+          .map((a) => document.getElementById(a.dataset.target))
+          .filter(Boolean);
+        if (!sections.length) return;
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                links.forEach((l) => l.classList.remove("active"));
+                const match = nav.querySelector(
+                  `a[data-target="${entry.target.id}"]`
+                );
+                if (match) match.classList.add("active");
+              }
+            });
+          },
+          { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+        );
+        sections.forEach((s) => observer.observe(s));
+
+        const background = document.getElementById("background");
+        if (background) {
+          function updateNavVisibility() {
+            const rect = background.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.5) {
+              nav.classList.add("visible");
+            } else {
+              nav.classList.remove("visible");
+            }
+          }
+          updateNavVisibility();
+          window.addEventListener("scroll", updateNavVisibility, {
+            passive: true,
+          });
+          window.addEventListener("resize", updateNavVisibility);
+        }
+      })();
+    </script>
+  </body>
+</html>
