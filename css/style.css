@@ -337,7 +337,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    padding: 24px;
+    padding: 18px;
     gap: 16px;
   }
   .hero-info {
