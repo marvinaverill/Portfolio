@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FUHH.IO — Case study</title>
+    <link rel="stylesheet" href="casestyle.css?v=22" />
+    <link rel="stylesheet" href="../css/animate.min.css" />
+    <link rel="icon" href="../assets/marvinLogo.svg" type="image/svg+xml" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Karla:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      id="imageModal"
+      class="image-modal"
+      onclick="handleBackdropClick(event)"
+    >
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage" alt="" />
+    </div>
+
+    <div class="work-bar">
+      <a href="index.html">
+        <div class="back-Button">
+          <img src="../assets/backButton.svg" alt="back" class="back-Button" />
+        </div>
+      </a>
+      <div class="title-description">
+        <div class="title-label">FUHH.IO</div>
+      </div>
+      <div class="back-Button" id="copyButton">
+        <img src="../assets/shareButton.svg" alt="share" class="share-Button" />
+      </div>
+      <div id="toast">⭐ Link copied! Now go spam your friends 💬</div>
+    </div>
+
+    <div class="main-content animate__animated animate__fadeInUp">
+      <article class="case-pro">
+        <img
+          src="../samples/blieve-cover.png"
+          alt="FUHH.IO cover"
+          class="case-pro-cover"
+        />
+
+        <div class="case-pro-body">
+          <!-- Intro -->
+          <section class="case-pro-intro" data-reveal>
+            <div class="case-pro-intro-label">UI/UX • Product Design • 2024</div>
+            <h1 class="case-pro-title">
+              <a
+                href="https://fuhh.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >FUHH.IO — Designing an Interactive Live Streaming Experience</a
+              >
+            </h1>
+            <p class="case-pro-lead">
+              FUHH.IO is a live streaming platform focused on real-time
+              interaction between streamers and viewers through live broadcasts,
+              virtual gifting, and community-driven engagement features.
+            </p>
+            <p class="case-pro-lead">
+              Inspired by modern creator platforms such as Kick, the platform
+              combines streaming, monetization, and interactive challenge
+              systems into a single connected experience designed to increase
+              participation and engagement during live sessions.
+            </p>
+          </section>
+
+          <!-- Meta -->
+          <section class="case-pro-meta-grid" data-reveal>
+            <div class="case-pro-meta-card">
+              <svg
+                class="case-pro-meta-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <div class="case-pro-meta-text">
+                <span class="case-pro-meta-label">Duration</span>
+                <span class="case-pro-meta-value">1 Month</span>
+              </div>
+            </div>
+
+            <div class="case-pro-meta-card">
+              <svg
+                class="case-pro-meta-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                <polyline points="2 17 12 22 22 17" />
+                <polyline points="2 12 12 17 22 12" />
+              </svg>
+              <div class="case-pro-meta-text">
+                <span class="case-pro-meta-label">Scope</span>
+                <span class="case-pro-meta-value">End-to-end Product Design</span>
+              </div>
+            </div>
+
+            <div class="case-pro-meta-card">
+              <svg
+                class="case-pro-meta-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+              <div class="case-pro-meta-text">
+                <span class="case-pro-meta-label">Platform</span>
+                <span class="case-pro-meta-value">Web Platform</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- My Role -->
+          <section id="role" class="case-pro-section" data-reveal>
+            <h2>My Role</h2>
+            <div class="case-pro-narrow">
+              <p><strong>Product Designer (UI/UX)</strong></p>
+              <p>Responsible for:</p>
+              <ul>
+                <li>UX strategy and workflow design</li>
+                <li>Live streaming experience design</li>
+                <li>Login and onboarding flows</li>
+                <li>User profile and account systems</li>
+                <li>Checkout and monetization flows</li>
+                <li>Gifting and challenge interactions</li>
+                <li>Responsive web experience</li>
+                <li>Design consistency across the platform</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Goals -->
+          <section id="goals" class="case-pro-section" data-reveal>
+            <h2>Goals</h2>
+            <div class="case-pro-narrow">
+              <p>The project focused on creating a live streaming platform that felt:</p>
+              <ul>
+                <li>More interactive between viewers and streamers</li>
+                <li>Easy to navigate during live sessions</li>
+                <li>Community-driven and engaging</li>
+                <li>Scalable for future social features</li>
+                <li>Visually immersive without feeling overwhelming</li>
+              </ul>
+              <p class="case-pro-callout">
+                The goal was not only to create a streaming platform, but to
+                design stronger engagement loops between creators and their
+                audience.
+              </p>
+            </div>
+          </section>
+
+          <!-- Background -->
+          <section id="background" class="case-pro-section" data-reveal>
+            <h2>Background</h2>
+            <div class="case-pro-narrow">
+              <p>
+                FUHH.IO was created as an interactive streaming platform where
+                users can watch streams, go live, send gifts, and participate
+                in real-time engagement experiences.
+              </p>
+              <p>
+                One of the platform's core features was the challenge system,
+                which allowed viewers to interact directly with streamers
+                through gifting coins and virtual items during live
+                broadcasts.
+              </p>
+              <p>The platform included:</p>
+              <ul>
+                <li>Live streaming</li>
+                <li>Viewer gifting systems</li>
+                <li>Virtual coins and items</li>
+                <li>Interactive challenge mechanics</li>
+                <li>Stream discovery</li>
+                <li>User profiles and account systems</li>
+                <li>Checkout and virtual currency purchases</li>
+              </ul>
+              <p>
+                I was responsible for designing the complete end-to-end
+                platform experience, including onboarding, live interfaces,
+                monetization flows, account systems, and overall UI
+                consistency.
+              </p>
+            </div>
+          </section>
+
+          <!-- Problem -->
+          <section id="problem" class="case-pro-section" data-reveal>
+            <h2>Problem</h2>
+            <div class="case-pro-narrow">
+              <p>
+                Many streaming platforms focus heavily on content consumption,
+                but provide limited interaction beyond chat and donations.
+              </p>
+              <p>Some common issues included:</p>
+              <ul>
+                <li>Passive viewer experiences</li>
+                <li>Overwhelming live stream interfaces</li>
+                <li>Disconnected monetization flows</li>
+                <li>Poor visibility for engagement features</li>
+                <li>Complicated gifting interactions</li>
+              </ul>
+              <p>
+                This created friction during live sessions and reduced
+                opportunities for deeper creator-viewer interaction.
+              </p>
+              <p class="case-pro-callout">
+                The challenge was designing a platform that encouraged
+                participation while keeping the streaming experience simple
+                and intuitive.
+              </p>
+            </div>
+          </section>
+
+          <!-- Before vs After -->
+          <section id="before-after" class="case-pro-section" data-reveal>
+            <h2>Before vs After</h2>
+            <div class="case-pro-ba-table">
+              <div class="case-pro-ba-head">
+                <div class="case-pro-ba-cell case-pro-ba-before">Before</div>
+                <div class="case-pro-ba-cell case-pro-ba-after">After</div>
+              </div>
+              <div class="case-pro-ba-row">
+                <div class="case-pro-ba-cell">Passive viewing experience</div>
+                <div class="case-pro-ba-cell">Interactive engagement system</div>
+              </div>
+              <div class="case-pro-ba-row">
+                <div class="case-pro-ba-cell">Basic donation flow</div>
+                <div class="case-pro-ba-cell">Gamified gifting experience</div>
+              </div>
+              <div class="case-pro-ba-row">
+                <div class="case-pro-ba-cell">Limited viewer participation</div>
+                <div class="case-pro-ba-cell">Real-time challenge interactions</div>
+              </div>
+              <div class="case-pro-ba-row">
+                <div class="case-pro-ba-cell">Fragmented monetization flow</div>
+                <div class="case-pro-ba-cell">Integrated coin and gifting system</div>
+              </div>
+              <div class="case-pro-ba-row">
+                <div class="case-pro-ba-cell">Complex live layouts</div>
+                <div class="case-pro-ba-cell">Streamlined streaming interface</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Solution -->
+          <section id="solution" class="case-pro-section" data-reveal>
+            <h2>Solution</h2>
+            <div class="case-pro-narrow">
+              <p>
+                Instead of focusing only on streaming functionality, the
+                platform was designed around interaction and engagement.
+              </p>
+            </div>
+            <img src="../samples/blieve-solution.jpg" alt="FUHH.IO solution sample" class="case-pro-block-image" />
+            <div class="case-pro-narrow">
+              <p>The experience focused on:</p>
+              <ul>
+                <li>Encouraging viewer participation</li>
+                <li>Simplifying gifting interactions</li>
+                <li>Creating stronger creator-viewer engagement</li>
+                <li>Reducing friction during live sessions</li>
+                <li>Making monetization feel integrated into the platform experience</li>
+              </ul>
+              <p>Key design directions included:</p>
+              <ul>
+                <li>Clear live stream hierarchy</li>
+                <li>Simplified gifting interactions</li>
+                <li>Persistent engagement components</li>
+                <li>Scalable challenge system layouts</li>
+                <li>Fast access to key actions during streams</li>
+                <li>Consistent UI patterns across user flows</li>
+              </ul>
+              <p class="case-pro-callout">
+                The goal was to make interactions feel natural without
+                interrupting the viewing experience.
+              </p>
+            </div>
+          </section>
+
+          <!-- Discovery -->
+          <section id="discovery" class="case-pro-section" data-reveal>
+            <h2>Discovery</h2>
+            <div class="case-pro-narrow">
+              <p>
+                During the discovery phase, I reviewed how existing streaming
+                platforms structured their live experiences, monetization
+                systems, and engagement mechanics.
+              </p>
+            </div>
+            <div class="case-pro-grid-final">
+              <img src="../samples/Showreel.png" alt="FUHH.IO discovery sample 1" class="case-pro-final-img" />
+              <img src="../samples/Spritzy.png" alt="FUHH.IO discovery sample 2" class="case-pro-final-img" />
+            </div>
+            <div class="case-pro-narrow">
+              <p>I also conducted competitor research to better understand:</p>
+              <ul>
+                <li>Live stream interaction patterns</li>
+                <li>Viewer engagement systems</li>
+                <li>Virtual gifting experiences</li>
+                <li>Monetization flows</li>
+                <li>Creator-focused interaction mechanics</li>
+              </ul>
+              <p>
+                One common observation was that many streaming platforms
+                prioritized content broadcasting more than audience
+                participation.
+              </p>
+              <p>Most interactions were limited to:</p>
+              <ul>
+                <li>Chat messages</li>
+                <li>Basic donations</li>
+                <li>Reactions</li>
+              </ul>
+              <p class="case-pro-callout">
+                This created an opportunity to design a more interactive
+                ecosystem where viewers could participate more actively
+                through challenges, gifting systems, and real-time engagement
+                mechanics.
+              </p>
+            </div>
+          </section>
+
+          <!-- Competitor Research -->
+          <section id="competitors" class="case-pro-section" data-reveal>
+            <h2>Competitor Research</h2>
+            <div class="case-pro-competitor-grid">
+              <article class="case-pro-competitor-card">
+                <h3>Kick</h3>
+                <div class="case-pro-proscons">
+                  <div class="case-pro-proscons-col case-pro-pros">
+                    <span class="case-pro-proscons-label">Pros</span>
+                    <ul>
+                      <li>Clean live streaming experience</li>
+                      <li>Creator-focused platform structure</li>
+                      <li>Simple stream viewing layout</li>
+                    </ul>
+                  </div>
+                  <div class="case-pro-proscons-col case-pro-cons">
+                    <span class="case-pro-proscons-label">Cons</span>
+                    <ul>
+                      <li>Limited engagement mechanics</li>
+                      <li>Viewer interaction relies heavily on chat</li>
+                      <li>Monetization experience feels basic</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <article class="case-pro-competitor-card">
+                <h3>Twitch</h3>
+                <div class="case-pro-proscons">
+                  <div class="case-pro-proscons-col case-pro-pros">
+                    <span class="case-pro-proscons-label">Pros</span>
+                    <ul>
+                      <li>Strong community ecosystem</li>
+                      <li>Mature streaming infrastructure</li>
+                      <li>Multiple monetization methods</li>
+                    </ul>
+                  </div>
+                  <div class="case-pro-proscons-col case-pro-cons">
+                    <span class="case-pro-proscons-label">Cons</span>
+                    <ul>
+                      <li>Interface can feel overwhelming</li>
+                      <li>Navigation becomes cluttered</li>
+                      <li>Engagement systems feel fragmented</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <article class="case-pro-competitor-card">
+                <h3>TikTok Live</h3>
+                <div class="case-pro-proscons">
+                  <div class="case-pro-proscons-col case-pro-pros">
+                    <span class="case-pro-proscons-label">Pros</span>
+                    <ul>
+                      <li>Strong gifting interaction system</li>
+                      <li>Fast-paced engagement loops</li>
+                      <li>High viewer participation</li>
+                    </ul>
+                  </div>
+                  <div class="case-pro-proscons-col case-pro-cons">
+                    <span class="case-pro-proscons-label">Cons</span>
+                    <ul>
+                      <li>Visually crowded interface</li>
+                      <li>Rapid interactions can overwhelm users</li>
+                      <li>Inconsistent interaction hierarchy</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- Research -->
+          <section id="research" class="case-pro-section" data-reveal>
+            <h2>Research</h2>
+            <div class="case-pro-narrow">
+              <p>
+                The research focused on balancing engagement, usability, and
+                monetization without overwhelming users during live sessions.
+              </p>
+            </div>
+            <img src="../samples/Gee1.jpg" alt="FUHH.IO research sample" class="case-pro-block-image" />
+            <div class="case-pro-narrow">
+              <p>Key observations included:</p>
+              <ul>
+                <li>Viewers engage more when interactions feel immediate</li>
+                <li>Simpler gifting flows improve participation</li>
+                <li>Persistent engagement visibility increases interaction</li>
+                <li>Clear hierarchy is critical during live viewing</li>
+                <li>Fewer interaction steps improve real-time usability</li>
+              </ul>
+              <p class="case-pro-callout">
+                One major insight was that engagement systems should feel
+                integrated into the streaming experience rather than treated
+                as separate features.
+              </p>
+            </div>
+          </section>
+
+          <!-- Challenges -->
+          <section id="challenges" class="case-pro-section" data-reveal>
+            <h2>Challenges</h2>
+            <div class="case-pro-narrow">
+              <p>
+                One of the biggest challenges was balancing engagement-heavy
+                features without making the live experience feel visually
+                overwhelming.
+              </p>
+            </div>
+            <div class="case-pro-grid-final">
+              <img src="../samples/blieve-challenges-1.jpg" alt="FUHH.IO challenges sample 1" class="case-pro-final-img" />
+              <img src="../samples/blieve-challenges-2.jpg" alt="FUHH.IO challenges sample 2" class="case-pro-final-img" />
+            </div>
+            <div class="case-pro-narrow">
+              <p>
+                Since live streaming environments already contain large
+                amounts of real-time information, the interface needed to
+                support:
+              </p>
+              <ul>
+                <li>Stream viewing</li>
+                <li>Live chat</li>
+                <li>Gifting interactions</li>
+                <li>Challenge participation</li>
+                <li>Monetization flows</li>
+              </ul>
+              <p>while still maintaining clarity and usability.</p>
+              <p class="case-pro-callout">
+                Another challenge was designing interaction systems that
+                encouraged participation without distracting users from the
+                main stream content.
+              </p>
+            </div>
+          </section>
+
+          <!-- Exploration -->
+          <section id="exploration" class="case-pro-section" data-reveal>
+            <h2>Exploration</h2>
+            <div class="case-pro-narrow">
+              <p>
+                Multiple design directions were explored before finalizing the
+                platform structure and interaction experience.
+              </p>
+            </div>
+            <div class="case-pro-grid-final">
+              <img src="../samples/CentraldekWeb1.png" alt="FUHH.IO exploration sample 1" class="case-pro-final-img" />
+              <img src="../samples/CentraldekWeb2.png" alt="FUHH.IO exploration sample 2" class="case-pro-final-img" />
+            </div>
+            <div class="case-pro-narrow">
+              <p>Explorations included:</p>
+              <ul>
+                <li>Sidebar chat vs floating chat layouts</li>
+                <li>Compact gifting systems vs expanded interaction panels</li>
+                <li>Minimal live UI vs engagement-heavy layouts</li>
+                <li>Persistent challenge widgets vs modal-based interactions</li>
+                <li>Simplified checkout flows vs multi-step purchases</li>
+              </ul>
+              <p>The final direction focused on:</p>
+              <ul>
+                <li>Clear stream hierarchy</li>
+                <li>Faster interaction flows</li>
+                <li>Minimal friction during live sessions</li>
+                <li>Strong visibility for engagement features</li>
+                <li>Scalable layouts for future social features</li>
+              </ul>
+              <p class="case-pro-callout">
+                This helped create a more immersive and interactive streaming
+                experience while maintaining usability across the platform.
+              </p>
+            </div>
+          </section>
+
+          <!-- Design System -->
+          <section id="design-system" class="case-pro-section" data-reveal>
+            <h2>Design System</h2>
+            <div class="case-pro-narrow">
+              <p>
+                To maintain consistency across the platform, I established
+                reusable UI patterns and scalable component structures for
+                streaming, gifting, account systems, and monetization flows.
+              </p>
+            </div>
+            <img src="../samples/blieve-design-system.jpg" alt="FUHH.IO design system sample" class="case-pro-block-image" />
+            <div class="case-pro-narrow">
+              <p>This included:</p>
+              <ul>
+                <li>Reusable live interaction components</li>
+                <li>Unified modal and drawer patterns</li>
+                <li>Consistent stream layouts</li>
+                <li>Shared navigation structures</li>
+                <li>Standardized checkout interactions</li>
+                <li>Scalable UI behaviors for engagement systems</li>
+              </ul>
+              <p class="case-pro-callout">
+                The system helped ensure the platform remained cohesive as new
+                features and social interactions were introduced.
+              </p>
+            </div>
+          </section>
+
+          <!-- Design -->
+          <section id="design" class="case-pro-section" data-reveal>
+            <h2>Design</h2>
+            <div class="case-pro-narrow">
+              <p>
+                The final design focused on creating a clean and immersive
+                streaming experience while supporting real-time interaction
+                across the platform.
+              </p>
+              <p>
+                The visual direction was intentionally designed to feel
+                modern, energetic, and engaging without overwhelming users
+                during live sessions.
+              </p>
+              <p>
+                The interface combined a minimal foundation with vibrant
+                gradient accents to balance usability and entertainment-focused
+                interaction.
+              </p>
+              <p>The primary visual palette focused on:</p>
+              <ul>
+                <li>White as the core foundation for clarity and readability</li>
+                <li>Blue gradients to create a modern and trustworthy streaming atmosphere</li>
+                <li>Red gradients to emphasize energy, interaction, and live engagement moments</li>
+              </ul>
+              <p>
+                This combination helped create a visually dynamic experience
+                while still maintaining strong hierarchy and usability during
+                fast-paced interactions.
+              </p>
+              <p>Key design decisions included:</p>
+              <ul>
+                <li>Stream-focused layouts with clear hierarchy</li>
+                <li>Simplified gifting interactions</li>
+                <li>Persistent engagement visibility</li>
+                <li>Fast-access interaction controls</li>
+                <li>Streamlined onboarding and account flows</li>
+                <li>Integrated monetization experience</li>
+                <li>Scalable challenge interaction system</li>
+                <li>Clean layouts with energetic visual accents</li>
+                <li>Modern gradient-driven highlights</li>
+                <li>Consistent spacing and modular UI patterns</li>
+              </ul>
+              <p class="case-pro-callout">
+                Every interface was designed to support real-time engagement
+                while keeping the experience intuitive, immersive, and easy to
+                navigate.
+              </p>
+            </div>
+            <div class="case-pro-grid-final">
+              <img src="../samples/Motion.png" alt="FUHH.IO final UI 1" class="case-pro-final-img" />
+              <img src="../samples/3D.png" alt="FUHH.IO final UI 2" class="case-pro-final-img" />
+              <img src="../samples/Marvinaverill.png" alt="FUHH.IO final UI 3" class="case-pro-final-img" />
+              <img src="../samples/Spritzy.png" alt="FUHH.IO final UI 4" class="case-pro-final-img" />
+              <img src="../samples/Showreel.png" alt="FUHH.IO final UI 5" class="case-pro-final-img" />
+              <img src="../samples/Koffi2.png" alt="FUHH.IO final UI 6" class="case-pro-final-img" />
+              <img src="../samples/Koffi1.png" alt="FUHH.IO final UI 7" class="case-pro-final-img" />
+              <img src="../samples/Koffi3.png" alt="FUHH.IO final UI 8" class="case-pro-final-img" />
+              <img src="../samples/NSK.png" alt="FUHH.IO final UI 9" class="case-pro-final-img" />
+              <img src="../samples/PIT.png" alt="FUHH.IO final UI 10" class="case-pro-final-img" />
+              <img src="../samples/Sevenx3.png" alt="FUHH.IO final UI 11" class="case-pro-final-img" />
+              <img src="../samples/Saturdays.png" alt="FUHH.IO final UI 12" class="case-pro-final-img" />
+            </div>
+          </section>
+
+          <!-- Outcome -->
+          <section id="outcome" class="case-pro-section" data-reveal>
+            <h2>Outcome</h2>
+            <div class="case-pro-narrow">
+              <p>
+                The final platform created a more interactive streaming
+                ecosystem that encouraged stronger participation between
+                viewers and streamers.
+              </p>
+            </div>
+            <div class="case-pro-grid-final">
+              <img src="../samples/Cathay1.png" alt="FUHH.IO outcome sample 1" class="case-pro-final-img" />
+              <img src="../samples/Mentorku.png" alt="FUHH.IO outcome sample 2" class="case-pro-final-img" />
+            </div>
+            <div class="case-pro-narrow">
+              <p>
+                By integrating gifting systems, challenge mechanics, and
+                monetization flows directly into the live experience, the
+                platform created a more connected and engaging environment
+                compared to traditional streaming workflows.
+              </p>
+              <p class="case-pro-callout">
+                The project also established a scalable design foundation that
+                could support future social and engagement-focused features.
+              </p>
+            </div>
+          </section>
+
+          <!-- Key Takeaways -->
+          <section id="takeaway" class="case-pro-section" data-reveal>
+            <h2>Key Takeaways</h2>
+            <blockquote class="case-pro-takeaway">
+              <span class="case-pro-takeaway-mark" aria-hidden="true">&ldquo;</span>
+              <div class="case-pro-takeaway-body">
+                <div class="case-pro-takeaway-content">
+                  <p class="case-pro-takeaway-lead">
+                    Designing FUHH.IO taught me how important interaction
+                    design becomes within real-time environments such as live
+                    streaming platforms.
+                  </p>
+                  <p>
+                    Unlike traditional content platforms, live experiences
+                    require users to process multiple layers of information
+                    simultaneously, including video content, chat activity,
+                    gifting interactions, and engagement systems. Because of
+                    this, maintaining visual clarity and interaction
+                    simplicity became one of the most important aspects of
+                    the design process.
+                  </p>
+                  <p>
+                    This project also reinforced the importance of balancing
+                    engagement and usability. While adding more interactive
+                    features can increase participation, too many simultaneous
+                    interactions can quickly overwhelm users if hierarchy and
+                    prioritization are not carefully designed.
+                  </p>
+                  <p>
+                    Another major learning was designing monetization systems
+                    that feel naturally integrated into the experience rather
+                    than interruptive. By embedding gifting and challenge
+                    mechanics directly into the streaming workflow, the
+                    interaction experience felt more seamless and engaging
+                    for both viewers and creators.
+                  </p>
+                  <p>Overall, this project strengthened my approach to designing:</p>
+                  <ul class="case-pro-takeaway-list">
+                    <li>Real-time interaction systems</li>
+                    <li>Engagement-focused experiences</li>
+                    <li>Scalable social platform UI</li>
+                    <li>Monetization workflows</li>
+                    <li>High-density interface environments</li>
+                  </ul>
+                </div>
+              </div>
+            </blockquote>
+          </section>
+        </div>
+      </article>
+    </div>
+
+    <nav class="case-pro-nav" id="caseProNav" aria-label="Section progress">
+      <div class="case-pro-nav-inner">
+        <a href="#role" data-target="role">Role</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#goals" data-target="goals">Goals</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#background" data-target="background">Background</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#problem" data-target="problem">Problem</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#before-after" data-target="before-after">Before / After</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#solution" data-target="solution">Solution</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#discovery" data-target="discovery">Discovery</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#competitors" data-target="competitors">Competitors</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#research" data-target="research">Research</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#challenges" data-target="challenges">Challenges</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#exploration" data-target="exploration">Exploration</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#design-system" data-target="design-system">Design System</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#design" data-target="design">Design</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#outcome" data-target="outcome">Outcome</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#takeaway" data-target="takeaway">Takeaways</a>
+      </div>
+    </nav>
+
+    <script src="../assets/reveal.js" defer></script>
+    <script>
+      (function () {
+        const button = document.getElementById("copyButton");
+        const toast = document.getElementById("toast");
+        if (button && toast) {
+          button.addEventListener("click", () => {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+              toast.classList.add("show");
+              setTimeout(() => toast.classList.remove("show"), 3500);
+            });
+          });
+        }
+
+        const zoomables = document.querySelectorAll(
+          ".case-pro-cover, .case-pro-wire-img, .case-pro-final-img, .case-pro-block-image"
+        );
+        zoomables.forEach((img) => {
+          img.addEventListener("click", () => openModal(img.src));
+        });
+      })();
+
+      function openModal(src) {
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+        modalImg.src = src;
+        modal.classList.add("show");
+      }
+      function closeModal() {
+        document.getElementById("imageModal").classList.remove("show");
+      }
+      function handleBackdropClick(e) {
+        if (e.target.classList.contains("image-modal")) closeModal();
+      }
+
+      (function () {
+        const nav = document.getElementById("caseProNav");
+        if (!nav) return;
+        const workBar = document.querySelector(".work-bar");
+        const navInner = nav.querySelector(".case-pro-nav-inner");
+        const links = nav.querySelectorAll("a");
+        const sections = Array.from(links)
+          .map((a) => document.getElementById(a.dataset.target))
+          .filter(Boolean);
+        if (!sections.length) return;
+
+        function alignNavToWorkBar() {
+          if (!workBar) return;
+          nav.style.top = workBar.offsetHeight + "px";
+        }
+        alignNavToWorkBar();
+        window.addEventListener("resize", alignNavToWorkBar);
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(alignNavToWorkBar);
+        }
+
+        function scrollNavToActive(link) {
+          if (!navInner || !link) return;
+          const linkRect = link.getBoundingClientRect();
+          const navRect = navInner.getBoundingClientRect();
+          const linkCenter = linkRect.left + linkRect.width / 2;
+          const navCenter = navRect.left + navRect.width / 2;
+          const delta = linkCenter - navCenter;
+          if (Math.abs(delta) < 4) return;
+          navInner.scrollTo({
+            left: navInner.scrollLeft + delta,
+            behavior: "smooth",
+          });
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                links.forEach((l) => l.classList.remove("active"));
+                const match = nav.querySelector(
+                  `a[data-target="${entry.target.id}"]`
+                );
+                if (match) {
+                  match.classList.add("active");
+                  scrollNavToActive(match);
+                }
+              }
+            });
+          },
+          { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+        );
+        sections.forEach((s) => observer.observe(s));
+
+        const firstSection = document.getElementById("role");
+        if (firstSection) {
+          function updateNavVisibility() {
+            const rect = firstSection.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.5) {
+              nav.classList.add("visible");
+            } else {
+              nav.classList.remove("visible");
+            }
+          }
+          updateNavVisibility();
+          window.addEventListener("scroll", updateNavVisibility, {
+            passive: true,
+          });
+          window.addEventListener("resize", updateNavVisibility);
+        }
+      })();
+    </script>
+  </body>
+</html>
