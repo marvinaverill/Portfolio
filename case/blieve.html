@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blieve.ai — Case study</title>
+    <link rel="stylesheet" href="casestyle.css?v=22" />
+    <link rel="stylesheet" href="../css/animate.min.css" />
+    <link rel="icon" href="../assets/marvinLogo.svg" type="image/svg+xml" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Karla:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      id="imageModal"
+      class="image-modal"
+      onclick="handleBackdropClick(event)"
+    >
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage" alt="" />
+    </div>
+
+    <div class="work-bar">
+      <a href="index.html">
+        <div class="back-Button">
+          <img src="../assets/backButton.svg" alt="back" class="back-Button" />
+        </div>
+      </a>
+      <div class="title-description">
+        <div class="title-label">BLIEVE.AI</div>
+      </div>
+      <div class="back-Button" id="copyButton">
+        <img src="../assets/shareButton.svg" alt="share" class="share-Button" />
+      </div>
+      <div id="toast">⭐ Link copied! Now go spam your friends 💬</div>
+    </div>
+
+    <div class="main-content animate__animated animate__fadeInUp">
+      <article class="case-pro">
+        <img
+          src="../samples/blieve-cover.jpg"
+          alt="Blieve.ai cover"
+          class="case-pro-cover"
+        />
+
+        <div class="case-pro-body">
+          <!-- Intro -->
+          <section class="case-pro-intro" data-reveal>
+            <div class="case-pro-intro-label">UI/UX • Product Design • 2024</div>
+            <h1 class="case-pro-title">
+              <a
+                href="https://www.blieve.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Blieve.ai — Designing a Unified AI Creative Ecosystem</a
+              >
+            </h1>
+            <p class="case-pro-lead">
+              Blieve.ai is an AI-powered creative ecosystem that combines
+              image generation, video creation, AI effects, AI headshots, and
+              AI companion features into a single connected platform.
+            </p>
+            <p class="case-pro-lead">
+              The project focused on consolidating multiple tools previously
+              separated across the 123RF ecosystem into a more seamless and
+              scalable experience, allowing users to create, edit, and manage
+              content more efficiently within one workflow.
+            </p>
+          </section>
+
+          <!-- Meta -->
+          <section class="case-pro-meta-grid" data-reveal>
+            <div class="case-pro-meta-card">
+              <svg
+                class="case-pro-meta-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <div class="case-pro-meta-text">
+                <span class="case-pro-meta-label">Duration</span>
+                <span class="case-pro-meta-value">4 Months</span>
+              </div>
+            </div>
+
+            <div class="case-pro-meta-card">
+              <svg
+                class="case-pro-meta-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                <polyline points="2 17 12 22 22 17" />
+                <polyline points="2 12 12 17 22 12" />
+              </svg>
+              <div class="case-pro-meta-text">
+                <span class="case-pro-meta-label">Scope</span>
+                <span class="case-pro-meta-value">End-to-end</span>
+              </div>
+            </div>
+
+            <div class="case-pro-meta-card">
+              <svg
+                class="case-pro-meta-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+              <div class="case-pro-meta-text">
+                <span class="case-pro-meta-label">Platform</span>
+                <span class="case-pro-meta-value">Web SaaS</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- My Role -->
+          <section id="role" class="case-pro-section" data-reveal>
+            <h2>My Role</h2>
+            <div class="case-pro-narrow">
+              <p><strong>Product Designer (UI/UX)</strong></p>
+              <p>Responsible for:</p>
+              <ul>
+                <li>UX strategy and workflow design</li>
+                <li>UI/UX design across the platform</li>
+                <li>AI tool experiences</li>
+                <li>Authentication and onboarding flows</li>
+                <li>Checkout and subscription experience</li>
+                <li>Design consistency across products</li>
+                <li>Responsive web experience</li>
+                <li>Design explorations and interaction patterns</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Goals -->
+          <section id="goals" class="case-pro-section" data-reveal>
+            <h2>Goals</h2>
+            <div class="case-pro-narrow">
+              <p>
+                The project focused on creating a more connected AI ecosystem
+                that felt:
+              </p>
+              <ul>
+                <li>Easier to navigate</li>
+                <li>Faster to learn</li>
+                <li>More approachable for non-technical users</li>
+                <li>More scalable for future AI tools</li>
+                <li>More consistent across workflows</li>
+              </ul>
+              <p class="case-pro-callout">
+                The goal was not only to introduce AI capabilities, but to
+                simplify how users interact with them.
+              </p>
+            </div>
+          </section>
+
+          <!-- Background -->
+          <section id="background" class="case-pro-section" data-reveal>
+            <h2>Background</h2>
+            <div class="case-pro-narrow">
+              <p>
+                Blieve.ai was created to unify multiple AI-powered creative
+                tools into one seamless platform experience.
+              </p>
+              <p>
+                Previously, users interacted with separate products that had
+                disconnected workflows and inconsistent interfaces. The goal
+                was to redesign the experience into a connected ecosystem
+                where users could move naturally between generating, editing,
+                transforming, and managing content without friction.
+              </p>
+              <p>The platform includes:</p>
+              <ul>
+                <li>AI image generation</li>
+                <li>AI effects</li>
+                <li>AI headshots</li>
+                <li>AI companion features</li>
+                <li>Image-to-video workflows</li>
+                <li>Creative asset management</li>
+              </ul>
+              <p>
+                I was responsible for designing the end-to-end product
+                experience, including the platform structure, AI tools,
+                onboarding experience, authentication flows, checkout process,
+                and overall UI consistency.
+              </p>
+            </div>
+          </section>
+
+          <!-- Problem -->
+          <section id="problem" class="case-pro-section" data-reveal>
+            <h2>Problem</h2>
+            <div class="case-pro-narrow">
+              <p>
+                Although the platform offered powerful AI capabilities, the
+                experience initially felt fragmented across multiple tools and
+                workflows.
+              </p>
+              <p>Users often needed to:</p>
+              <ul>
+                <li>Switch between separate interfaces</li>
+                <li>Relearn different interaction patterns</li>
+                <li>Repeat actions across workflows</li>
+                <li>Navigate overly complex settings</li>
+                <li>Manage inconsistent user experiences</li>
+              </ul>
+              <p>
+                This created unnecessary friction and slowed down the creative
+                process, especially for casual creators and non-technical
+                users.
+              </p>
+              <p class="case-pro-callout">
+                The challenge was not only introducing more AI features, but
+                creating a smoother and more connected experience between
+                them.
+              </p>
+            </div>
+          </section>
+
+          <!-- Before vs After -->
+          <section id="before-after" class="case-pro-section" data-reveal>
+            <h2>Before vs After</h2>
+            <div class="case-pro-ba-table">
+              <div class="case-pro-ba-head">
+                <div class="case-pro-ba-cell case-pro-ba-before">Before</div>
+                <div class="case-pro-ba-cell case-pro-ba-after">After</div>
+              </div>
+              <div class="case-pro-ba-row">
+                <div class="case-pro-ba-cell">Disconnected tools</div>
+                <div class="case-pro-ba-cell">Unified AI ecosystem</div>
+              </div>
+              <div class="case-pro-ba-row">
+                <div class="case-pro-ba-cell">Inconsistent interfaces</div>
+                <div class="case-pro-ba-cell">Consistent UI patterns</div>
+              </div>
+              <div class="case-pro-ba-row">
+                <div class="case-pro-ba-cell">Complex workflows</div>
+                <div class="case-pro-ba-cell">Guided creation flows</div>
+              </div>
+              <div class="case-pro-ba-row">
+                <div class="case-pro-ba-cell">Feature-heavy experiences</div>
+                <div class="case-pro-ba-cell">Simplified hierarchy</div>
+              </div>
+              <div class="case-pro-ba-row">
+                <div class="case-pro-ba-cell">Repetitive navigation</div>
+                <div class="case-pro-ba-cell">Connected workflows</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Solution -->
+          <section id="solution" class="case-pro-section" data-reveal>
+            <h2>Solution</h2>
+            <div class="case-pro-narrow">
+              <p>
+                Instead of treating every AI feature as an isolated product, I
+                focused on designing a unified workflow across the platform.
+              </p>
+            </div>
+            <img src="../samples/blieve-solution.jpg" alt="Blieve.ai Image Generator interface" class="case-pro-block-image" />
+            <div class="case-pro-narrow">
+              <p>
+                The experience was structured to help users move more
+                naturally between:
+              </p>
+              <ul>
+                <li>Generating</li>
+                <li>Editing</li>
+                <li>Enhancing</li>
+                <li>Transforming</li>
+                <li>Exporting</li>
+              </ul>
+              <p>Key design directions included:</p>
+              <ul>
+                <li>Consistent UI patterns across all tools</li>
+                <li>Simplified navigation and hierarchy</li>
+                <li>Guided workflows for beginners</li>
+                <li>Scalable layouts for future AI features</li>
+                <li>Reduced cognitive load during creation</li>
+                <li>Progressive disclosure for advanced settings</li>
+              </ul>
+              <p class="case-pro-callout">
+                The goal was to make advanced AI tools feel more approachable,
+                intuitive, and connected within a single ecosystem.
+              </p>
+            </div>
+          </section>
+
+          <!-- Discovery -->
+          <section id="discovery" class="case-pro-section" data-reveal>
+            <h2>Discovery</h2>
+            <div class="case-pro-narrow">
+              <p>
+                During the discovery phase, I reviewed how existing AI
+                creative platforms structured their workflows, interactions,
+                and feature hierarchy.
+              </p>
+            </div>
+            <div class="case-pro-grid-final">
+              <img src="../samples/blieve-discovery-1.jpg" alt="Canva — competitor reference" class="case-pro-final-img" />
+              <img src="../samples/blieve-discovery-2.jpg" alt="Picsart — competitor reference" class="case-pro-final-img" />
+            </div>
+            <div class="case-pro-narrow">
+              <p>I also conducted competitor research to better understand:</p>
+              <ul>
+                <li>Navigation patterns</li>
+                <li>Tool organization</li>
+                <li>AI interaction models</li>
+                <li>Content generation workflows</li>
+                <li>User onboarding approaches</li>
+              </ul>
+              <p>A common pattern quickly became clear:</p>
+              <ul>
+                <li>Many AI platforms were feature-heavy but disconnected</li>
+                <li>Interfaces often became overwhelming very quickly</li>
+                <li>Users cared more about outcomes than technical complexity</li>
+                <li>Switching between tools disrupted creative momentum</li>
+              </ul>
+              <p>
+                One important insight was that users rarely think in terms of
+                individual “tools.”
+              </p>
+              <p>
+                Instead, users think in terms of outcomes:
+                <em>“I want to create something quickly and easily.”</em>
+              </p>
+              <p class="case-pro-callout">
+                This shifted the design direction from feature-first to
+                workflow-first.
+              </p>
+            </div>
+          </section>
+
+          <!-- Competitor Research -->
+          <section id="competitors" class="case-pro-section" data-reveal>
+            <h2>Competitor Research</h2>
+            <div class="case-pro-competitor-grid">
+              <article class="case-pro-competitor-card">
+                <h3>Midjourney</h3>
+                <div class="case-pro-proscons">
+                  <div class="case-pro-proscons-col case-pro-pros">
+                    <span class="case-pro-proscons-label">Pros</span>
+                    <ul>
+                      <li>High-quality AI image outputs</li>
+                      <li>Strong creative community ecosystem</li>
+                      <li>Simple prompting experience</li>
+                    </ul>
+                  </div>
+                  <div class="case-pro-proscons-col case-pro-cons">
+                    <span class="case-pro-proscons-label">Cons</span>
+                    <ul>
+                      <li>Workflow heavily depends on Discord</li>
+                      <li>Difficult for beginners to navigate</li>
+                      <li>Limited structured editing workflow</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <article class="case-pro-competitor-card">
+                <h3>Canva AI</h3>
+                <div class="case-pro-proscons">
+                  <div class="case-pro-proscons-col case-pro-pros">
+                    <span class="case-pro-proscons-label">Pros</span>
+                    <ul>
+                      <li>Beginner-friendly interface</li>
+                      <li>Strong all-in-one creation ecosystem</li>
+                      <li>Familiar editing experience</li>
+                    </ul>
+                  </div>
+                  <div class="case-pro-proscons-col case-pro-cons">
+                    <span class="case-pro-proscons-label">Cons</span>
+                    <ul>
+                      <li>AI features feel separated from the main workflow</li>
+                      <li>Limited advanced AI customization</li>
+                      <li>Interface can become crowded with features</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <article class="case-pro-competitor-card">
+                <h3>Runway</h3>
+                <div class="case-pro-proscons">
+                  <div class="case-pro-proscons-col case-pro-pros">
+                    <span class="case-pro-proscons-label">Pros</span>
+                    <ul>
+                      <li>Powerful AI video generation capabilities</li>
+                      <li>Professional creative workflow tools</li>
+                      <li>Strong timeline-based editing experience</li>
+                    </ul>
+                  </div>
+                  <div class="case-pro-proscons-col case-pro-cons">
+                    <span class="case-pro-proscons-label">Cons</span>
+                    <ul>
+                      <li>Complex interface for new users</li>
+                      <li>Steeper learning curve</li>
+                      <li>Navigation can feel overwhelming</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- Research -->
+          <section id="research" class="case-pro-section" data-reveal>
+            <h2>Research</h2>
+            <div class="case-pro-narrow">
+              <p>
+                The research focused on simplifying creative workflows while
+                keeping the platform scalable for multiple AI-powered
+                experiences.
+              </p>
+            </div>
+            <img src="../samples/blieve-research.jpg" alt="Blieve.ai feature list research spreadsheet" class="case-pro-block-image" />
+            <div class="case-pro-narrow">
+              <p>Key observations included:</p>
+              <ul>
+                <li>Users preferred guided flows over complex dashboards</li>
+                <li>Clear hierarchy reduced hesitation during creation</li>
+                <li>Familiar interaction patterns improved confidence</li>
+                <li>Progressive disclosure worked better for advanced controls</li>
+                <li>Consistency across tools improved overall usability</li>
+              </ul>
+              <p class="case-pro-callout">
+                The biggest opportunity was creating a connected ecosystem
+                rather than designing every feature independently.
+              </p>
+            </div>
+          </section>
+
+          <!-- Challenges -->
+          <section id="challenges" class="case-pro-section" data-reveal>
+            <h2>Challenges</h2>
+            <div class="case-pro-narrow">
+              <p>
+                One of the biggest challenges was maintaining consistency
+                across multiple AI tools while still allowing each feature to
+                have its own flexibility and functionality.
+              </p>
+            </div>
+            <div class="case-pro-grid-final">
+              <img src="../samples/blieve-challenges-1.jpg" alt="Blieve.ai sidebar overview across AI tools" class="case-pro-final-img" />
+              <img src="../samples/blieve-challenges-2.jpg" alt="Blieve.ai tools panel states and settings" class="case-pro-final-img" />
+            </div>
+            <div class="case-pro-narrow">
+              <p>
+                Since the platform continuously evolved with new AI
+                capabilities, the design system also needed to remain scalable
+                enough to support future expansion without making the
+                experience feel cluttered or overwhelming.
+              </p>
+              <p class="case-pro-callout">
+                Balancing simplicity and flexibility became a key part of the
+                design process throughout the project.
+              </p>
+            </div>
+          </section>
+
+          <!-- Exploration -->
+          <section id="exploration" class="case-pro-section" data-reveal>
+            <h2>Exploration</h2>
+            <div class="case-pro-narrow">
+              <p>
+                Multiple design directions were explored before finalizing the
+                platform structure and workflow experience.
+              </p>
+            </div>
+            <div class="case-pro-grid-final">
+              <img src="../samples/blieve-exploration-1.jpg" alt="AI Image Generator exploration" class="case-pro-final-img" />
+              <img src="../samples/blieve-exploration-2.jpg" alt="Generative AI suite exploration" class="case-pro-final-img" />
+            </div>
+            <div class="case-pro-narrow">
+              <p>Explorations included:</p>
+              <ul>
+                <li>Tool-based navigation vs workflow-based navigation</li>
+                <li>Minimal dashboard vs feature-heavy layouts</li>
+                <li>Split preview layouts vs single canvas experiences</li>
+                <li>Simplified controls vs advanced AI settings</li>
+              </ul>
+              <p>The final direction focused on:</p>
+              <ul>
+                <li>Guided workflows</li>
+                <li>Cleaner visual hierarchy</li>
+                <li>Faster creation flow</li>
+                <li>Reduced decision fatigue</li>
+                <li>Better scalability for future tools</li>
+              </ul>
+              <p class="case-pro-callout">
+                This helped create a more approachable experience while
+                supporting a growing ecosystem of AI-powered features.
+              </p>
+            </div>
+          </section>
+
+          <!-- Design System -->
+          <section id="design-system" class="case-pro-section" data-reveal>
+            <h2>Design System</h2>
+            <div class="case-pro-narrow">
+              <p>
+                To maintain consistency across the platform, I established
+                reusable UI patterns and scalable component structures that
+                could support multiple AI workflows while keeping the
+                experience visually cohesive.
+              </p>
+            </div>
+            <img src="../samples/blieve-design-system.jpg" alt="Blieve.ai design system overview — inputs, tabs, dropdowns, buttons, icon buttons, settings thumbnails" class="case-pro-block-image" />
+            <div class="case-pro-narrow">
+              <p>This included:</p>
+              <ul>
+                <li>Consistent spacing and layout behavior</li>
+                <li>Reusable card and modal patterns</li>
+                <li>Unified form interactions</li>
+                <li>Shared navigation structures</li>
+                <li>Scalable component behaviors across tools</li>
+              </ul>
+              <p class="case-pro-callout">
+                The system helped streamline future feature expansion while
+                maintaining a familiar user experience across the platform.
+              </p>
+            </div>
+          </section>
+
+          <!-- Design -->
+          <section id="design" class="case-pro-section" data-reveal>
+            <h2>Design</h2>
+            <div class="case-pro-narrow">
+              <p>
+                The final design focused on clarity, consistency, and
+                scalability across the platform.
+              </p>
+              <p>Key design decisions included:</p>
+              <ul>
+                <li>Consistent layouts across AI tools</li>
+                <li>Centralized creation experience</li>
+                <li>Simplified onboarding and login flows</li>
+                <li>Streamlined checkout experience</li>
+                <li>Modular UI structure for future expansion</li>
+                <li>Progressive disclosure for advanced settings</li>
+              </ul>
+              <p class="case-pro-callout">
+                Every interface was designed to reduce friction and help users
+                focus more on creating rather than learning complicated
+                workflows.
+              </p>
+            </div>
+            <div class="case-pro-grid-final">
+              <img src="../samples/blieve-design-1.jpg" alt="Blieve.ai tablet — projects view" class="case-pro-final-img" />
+              <img src="../samples/blieve-design-2.jpg" alt="Blieve.ai laptop — explore view" class="case-pro-final-img" />
+              <img src="../samples/blieve-design-3.jpg" alt="Blieve.ai laptop — image generator" class="case-pro-final-img" />
+              <img src="../samples/blieve-design-4.jpg" alt="Blieve.ai tablet — image generator on couch" class="case-pro-final-img" />
+              <img src="../samples/blieve-design-5.jpg" alt="Blieve.ai mobile — explore" class="case-pro-final-img" />
+              <img src="../samples/blieve-design-6.jpg" alt="Blieve.ai tablet — sketch to image" class="case-pro-final-img" />
+            </div>
+          </section>
+
+          <!-- Outcome -->
+          <section id="outcome" class="case-pro-section" data-reveal>
+            <h2>Outcome</h2>
+            <div class="case-pro-narrow">
+              <p>
+                The final platform created a more connected and scalable AI
+                ecosystem that simplified workflows across multiple tools
+                while improving consistency throughout the user experience.
+              </p>
+            </div>
+            <div class="case-pro-grid-final">
+              <img src="../samples/blieve-outcome-1.jpg" alt="Blieve.ai projects view" class="case-pro-final-img" />
+              <img src="../samples/blieve-outcome-2.jpg" alt="Blieve.ai background remix workflow" class="case-pro-final-img" />
+            </div>
+            <div class="case-pro-narrow">
+              <p>
+                By unifying previously separated experiences into a single
+                platform, users could move through workflows more naturally
+                without needing to constantly switch contexts or relearn
+                interfaces.
+              </p>
+              <p class="case-pro-callout">
+                The project also established a stronger design foundation that
+                could scale alongside future AI features and product
+                expansion.
+              </p>
+            </div>
+          </section>
+
+          <!-- Key Takeaways -->
+          <section id="takeaway" class="case-pro-section" data-reveal>
+            <h2>Key Takeaways</h2>
+            <blockquote class="case-pro-takeaway">
+              <span class="case-pro-takeaway-mark" aria-hidden="true">&ldquo;</span>
+              <div class="case-pro-takeaway-body">
+                <div class="case-pro-takeaway-content">
+                  <p class="case-pro-takeaway-lead">
+                    Designing Blieve.ai taught me that successful AI products
+                    are not only about adding more features, but about
+                    creating clarity between them.
+                  </p>
+                  <p>
+                    One of the biggest lessons from this project was
+                    understanding how important workflow thinking is within AI
+                    products. Users rarely focus on technical complexity or
+                    individual tools. Instead, they care about achieving
+                    outcomes quickly and smoothly. Because of this,
+                    simplifying transitions between workflows became just as
+                    important as the features themselves.
+                  </p>
+                  <p>
+                    This project also reinforced the importance of consistency
+                    within rapidly evolving products. As more AI capabilities
+                    were introduced, maintaining predictable interaction
+                    patterns and scalable UI structures became critical in
+                    preventing the experience from feeling overwhelming.
+                  </p>
+                  <p>
+                    Another key learning was designing for scalability. Since
+                    the platform continuously evolved with new features and
+                    workflows, the design system needed to remain flexible
+                    enough to support future expansion while still feeling
+                    cohesive and familiar to users.
+                  </p>
+                  <p>
+                    Overall, this project strengthened my approach to
+                    designing AI products with a stronger focus on:
+                  </p>
+                  <ul class="case-pro-takeaway-list">
+                    <li>Workflow clarity</li>
+                    <li>System consistency</li>
+                    <li>Scalable UI architecture</li>
+                    <li>Reducing cognitive load</li>
+                    <li>Designing for both beginners and advanced users</li>
+                  </ul>
+                </div>
+              </div>
+            </blockquote>
+          </section>
+        </div>
+      </article>
+    </div>
+
+    <nav class="case-pro-nav" id="caseProNav" aria-label="Section progress">
+      <div class="case-pro-nav-inner">
+        <a href="#role" data-target="role">Role</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#goals" data-target="goals">Goals</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#background" data-target="background">Background</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#problem" data-target="problem">Problem</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#before-after" data-target="before-after">Before / After</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#solution" data-target="solution">Solution</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#discovery" data-target="discovery">Discovery</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#competitors" data-target="competitors">Competitors</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#research" data-target="research">Research</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#challenges" data-target="challenges">Challenges</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#exploration" data-target="exploration">Exploration</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#design-system" data-target="design-system">Design System</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#design" data-target="design">Design</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#outcome" data-target="outcome">Outcome</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#takeaway" data-target="takeaway">Takeaways</a>
+      </div>
+    </nav>
+
+    <script src="../assets/reveal.js" defer></script>
+    <script>
+      (function () {
+        const button = document.getElementById("copyButton");
+        const toast = document.getElementById("toast");
+        if (button && toast) {
+          button.addEventListener("click", () => {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+              toast.classList.add("show");
+              setTimeout(() => toast.classList.remove("show"), 3500);
+            });
+          });
+        }
+
+        const zoomables = document.querySelectorAll(
+          ".case-pro-cover, .case-pro-wire-img, .case-pro-final-img, .case-pro-block-image"
+        );
+        zoomables.forEach((img) => {
+          img.addEventListener("click", () => openModal(img.src));
+        });
+      })();
+
+      function openModal(src) {
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+        modalImg.src = src;
+        modal.classList.add("show");
+      }
+      function closeModal() {
+        document.getElementById("imageModal").classList.remove("show");
+      }
+      function handleBackdropClick(e) {
+        if (e.target.classList.contains("image-modal")) closeModal();
+      }
+
+      (function () {
+        const nav = document.getElementById("caseProNav");
+        if (!nav) return;
+        const workBar = document.querySelector(".work-bar");
+        const navInner = nav.querySelector(".case-pro-nav-inner");
+        const links = nav.querySelectorAll("a");
+        const sections = Array.from(links)
+          .map((a) => document.getElementById(a.dataset.target))
+          .filter(Boolean);
+        if (!sections.length) return;
+
+        function alignNavToWorkBar() {
+          if (!workBar) return;
+          nav.style.top = workBar.offsetHeight + "px";
+        }
+        alignNavToWorkBar();
+        window.addEventListener("resize", alignNavToWorkBar);
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(alignNavToWorkBar);
+        }
+
+        function scrollNavToActive(link) {
+          if (!navInner || !link) return;
+          const linkRect = link.getBoundingClientRect();
+          const navRect = navInner.getBoundingClientRect();
+          const linkCenter = linkRect.left + linkRect.width / 2;
+          const navCenter = navRect.left + navRect.width / 2;
+          const delta = linkCenter - navCenter;
+          if (Math.abs(delta) < 4) return;
+          navInner.scrollTo({
+            left: navInner.scrollLeft + delta,
+            behavior: "smooth",
+          });
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                links.forEach((l) => l.classList.remove("active"));
+                const match = nav.querySelector(
+                  `a[data-target="${entry.target.id}"]`
+                );
+                if (match) {
+                  match.classList.add("active");
+                  scrollNavToActive(match);
+                }
+              }
+            });
+          },
+          { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+        );
+        sections.forEach((s) => observer.observe(s));
+
+        const firstSection = document.getElementById("role");
+        if (firstSection) {
+          function updateNavVisibility() {
+            const rect = firstSection.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.5) {
+              nav.classList.add("visible");
+            } else {
+              nav.classList.remove("visible");
+            }
+          }
+          updateNavVisibility();
+          window.addEventListener("scroll", updateNavVisibility, {
+            passive: true,
+          });
+          window.addEventListener("resize", updateNavVisibility);
+        }
+      })();
+    </script>
+  </body>
+</html>
