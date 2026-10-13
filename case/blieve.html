@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blieve.ai: Case study</title>
+    <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../css/site.css" />
+    <link rel="stylesheet" href="casestyle.css?v=30" />
+        <link rel="icon" href="../assets/icons/marvinLogo.svg" type="image/svg+xml" />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div
+      id="imageModal"
+      class="image-modal"
+      onclick="handleBackdropClick(event)"
+    >
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage" alt="" />
+    </div>
+
+    <div class="progress" aria-hidden="true"></div>
+    <header class="nav work-bar">
+      <div class="container nav-inner">
+        <a class="nav-logo" href="../index.html" aria-label="Marvin Averill, home">
+          <img src="../assets/icons/logo.svg" alt="" />
+        </a>
+        <nav class="nav-links" aria-label="Main">
+          <a href="../case/index.html" aria-current="page"><span class="roll" data-text="Case studies"><span>Case studies</span></span><sup>05</sup></a>
+          <a href="../work/index.html"><span class="roll" data-text="Work"><span>Work</span></span><sup>21</sup></a>
+          <a href="../about/index.html"><span class="roll" data-text="About"><span>About</span></span></a>
+        </nav>
+        <div class="nav-tools">
+          <button class="icon-btn" type="button" id="copyButton" aria-label="Copy link to this page">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+          </button>
+          <button class="icon-btn theme-toggle" type="button" aria-label="Switch between light and dark">
+            <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+            <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          </button>
+          <a class="btn btn-primary btn-sm nav-cta" href="mailto:marvin.avl16@gmail.com?subject=Design%20Inquiry" data-magnetic>Let's talk <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="siteMenu">Menu<span class="burger" aria-hidden="true"><i></i><i></i></span></button>
+        </div>
+      </div>
+    </header>
+    <div class="menu" id="siteMenu">
+      <nav class="menu-links" aria-label="Menu">
+        <a href="../index.html"><span class="mono">01</span>Home</a>
+        <a href="../case/index.html" aria-current="page"><span class="mono">02</span>Case studies</a>
+        <a href="../work/index.html"><span class="mono">03</span>Work</a>
+        <a href="../about/index.html"><span class="mono">04</span>About</a>
+      </nav>
+      <div class="menu-foot">
+        <a class="btn btn-primary btn-lg" href="mailto:marvin.avl16@gmail.com?subject=Design%20Inquiry">Let's talk <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <div class="socials">
+          <a class="social" href="https://www.behance.net/marvinaverill" target="_blank" rel="noopener noreferrer" aria-label="Behance"><img src="../assets/icons/behance.svg" alt="" /></a>
+          <a class="social" href="https://www.linkedin.com/in/marvinaverill/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="../assets/icons/linkedin.svg" alt="" /></a>
+          <a class="social" href="https://medium.com/@marvinaverill" target="_blank" rel="noopener noreferrer" aria-label="Medium"><img src="../assets/icons/medium.svg" alt="" /></a>
+          <a class="social" href="https://api.whatsapp.com/send/?phone=628116327333" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><img src="../assets/icons/whatsapp.svg" alt="" /></a>
+          <a class="social" href="mailto:marvin.avl16@gmail.com?subject=Design%20Inquiry" aria-label="Email"><img src="../assets/icons/gmail.svg" alt="" /></a>
+        </div>
+      </div>
+    </div>
+    <div id="toast" role="status">Link copied. Go share it around ✨</div>
+
+
+    <div class="main-content">
+      <article class="case-pro">
+        <img
+          src="../images/blieve-cover.jpg"
+          alt="Blieve.ai cover"
+          class="case-pro-cover"
+        />
+
+        <div class="case-pro-body">
+          <!-- Intro -->
+          <section class="case-pro-intro" data-reveal>
+            <div class="case-pro-intro-label">UI/UX • Product Design • 2024</div>
+            <h1 class="case-pro-title">
+              <a
+                href="https://www.blieve.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Blieve.ai: Bringing 11 AI Creative Tools Into One Simple App</a
+              >
+            </h1>
+            <p class="case-pro-lead">Blieve.ai is a website where anyone can create with AI: turn a text description into an image, get a professional headshot from your photos, add effects, or turn a picture into a short video.</p>
+            <p class="case-pro-lead">123RF had built these as 11 separate tools, each with its own look and its own way of working. Over four months I designed the one platform that brings them together, so people learn it once and move from tool to tool without starting over, from sign-up all the way to checkout.</p>
+          </section>
+
+          <!-- Meta -->
+          <section class="case-pro-meta-grid" data-reveal>
+            <div class="case-pro-meta-card">
+              <svg
+                class="case-pro-meta-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <div class="case-pro-meta-text">
+                <span class="case-pro-meta-label">Duration</span>
+                <span class="case-pro-meta-value">4 Months</span>
+              </div>
+            </div>
+
+            <div class="case-pro-meta-card">
+              <svg
+                class="case-pro-meta-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                <polyline points="2 17 12 22 22 17" />
+                <polyline points="2 12 12 17 22 12" />
+              </svg>
+              <div class="case-pro-meta-text">
+                <span class="case-pro-meta-label">Scope</span>
+                <span class="case-pro-meta-value">End-to-end</span>
+              </div>
+            </div>
+
+            <div class="case-pro-meta-card">
+              <svg
+                class="case-pro-meta-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+              <div class="case-pro-meta-text">
+                <span class="case-pro-meta-label">Platform</span>
+                <span class="case-pro-meta-value">Web SaaS</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- My Role -->
+          <section id="role" class="case-pro-section" data-reveal>
+            <h2>My Role</h2>
+            <div class="case-pro-narrow">
+              <p><strong>Product Designer (UI/UX)</strong></p>
+              <p>What I worked on</p>
+              <ul><li>The overall structure, and how people move from one tool to the next</li><li>The screens for every AI tool</li><li>Sign-up, login and onboarding</li><li>Checkout and subscription plans</li><li>Shared components so every tool looks and behaves the same</li><li>Layouts that work on desktop, tablet and phone</li></ul>
+            </div>
+          </section>
+
+          <!-- Goals -->
+          <section id="goals" class="case-pro-section" data-reveal>
+            <h2>Goals</h2>
+            <div class="case-pro-narrow">
+              <p>I wanted someone who has never used an AI tool to feel at home within a few minutes.</p>
+              <p>So the platform had to be</p>
+              <ul><li>Easy to find your way around</li><li>Quick to learn, even for non-technical people</li><li>Consistent, so learning one tool teaches you the next</li><li>Ready for new tools without a redesign</li></ul>
+              <p class="case-pro-callout">Adding AI was the easy part. Making it simple to use was the real job.</p>
+            </div>
+          </section>
+
+          <!-- Background -->
+          <section id="background" class="case-pro-section" data-reveal>
+            <h2>Background</h2>
+            <div class="case-pro-narrow">
+              <p>123RF had built a lot of useful AI tools, but they were scattered.</p>
+              <p>Each tool was its own product with its own interface. If you generated an image and then wanted to turn it into a video, you had to jump somewhere else and learn a new layout. Blieve.ai was the chance to bring everything under one roof, so people could generate, edit, transform and keep their work without leaving.</p>
+              <p>The platform covers</p>
+              <ul><li>AI image generation</li><li>AI effects</li><li>AI headshots</li><li>AI companion</li><li>Image-to-video</li><li>A library for everything you create</li></ul>
+              <p>I designed it end to end: the structure, every tool screen, onboarding, login, checkout and the shared UI that ties it all together.</p>
+            </div>
+          </section>
+
+          <!-- Problem -->
+          <section id="problem" class="case-pro-section" data-reveal>
+            <h2>Problem</h2>
+            <div class="case-pro-narrow">
+              <p>The tools were powerful, but using them felt like visiting five different apps.</p>
+              <p>In practice, people had to</p>
+              <ul><li>Switch between separate interfaces</li><li>Relearn how things work in every tool</li><li>Repeat steps they had already done somewhere else</li><li>Dig through settings they didn't understand</li></ul>
+              <p>For casual creators that was often enough to give up. They didn't come for the technology. They came to make something.</p>
+              <p class="case-pro-callout">The problem wasn't missing features. It was the gaps between them.</p>
+            </div>
+          </section>
+
+          <!-- Before vs After -->
+          <section id="before-after" class="case-pro-section" data-reveal>
+            <h2>Before vs After</h2>
+            <div class="case-pro-ba-table">
+              <div class="case-pro-ba-head">
+                <div class="case-pro-ba-cell case-pro-ba-before">Before</div>
+                <div class="case-pro-ba-cell case-pro-ba-after">After</div>
+              </div>
+              <div class="case-pro-ba-row">
+                <div class="case-pro-ba-cell">Disconnected tools</div>
+                <div class="case-pro-ba-cell">Unified AI ecosystem</div>
+              </div>
+              <div class="case-pro-ba-row">
+                <div class="case-pro-ba-cell">Inconsistent interfaces</div>
+                <div class="case-pro-ba-cell">Consistent UI patterns</div>
+              </div>
+              <div class="case-pro-ba-row">
+                <div class="case-pro-ba-cell">Complex workflows</div>
+                <div class="case-pro-ba-cell">Guided creation flows</div>
+              </div>
+              <div class="case-pro-ba-row">
+                <div class="case-pro-ba-cell">Feature-heavy experiences</div>
+                <div class="case-pro-ba-cell">Simplified hierarchy</div>
+              </div>
+              <div class="case-pro-ba-row">
+                <div class="case-pro-ba-cell">Repetitive navigation</div>
+                <div class="case-pro-ba-cell">Connected workflows</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Solution -->
+          <section id="solution" class="case-pro-section" data-reveal>
+            <h2>Solution</h2>
+            <div class="case-pro-narrow">
+              <p>I stopped treating each AI feature as its own product, and designed one workflow instead.</p>
+            </div>
+            <img loading="lazy" src="../images/blieve-solution.jpg" alt="Blieve.ai Image Generator interface" class="case-pro-block-image" />
+            <div class="case-pro-narrow">
+              <p>Every tool now follows the same path: generate, edit, enhance, transform and export. Once you've used one tool, you already know how the rest work.</p>
+              <p>To get there, I</p>
+              <ul><li>Gave every tool the same structure and controls</li><li>Simplified the navigation into a few clear groups</li><li>Added guided steps for first-time users</li><li>Tucked advanced settings away until someone asks for them</li><li>Built layouts with room for tools that don't exist yet</li></ul>
+              <p class="case-pro-callout">Powerful for people who want control, simple for everyone else.</p>
+            </div>
+          </section>
+
+          <!-- Discovery -->
+          <section id="discovery" class="case-pro-section" data-reveal>
+            <h2>Discovery</h2>
+            <div class="case-pro-narrow">
+              <p>Before designing anything, I looked at how other AI creative tools organise their features.</p>
+            </div>
+            <div class="case-pro-grid-final">
+              <img loading="lazy" src="../images/blieve-discovery-1.jpg" alt="Canva, competitor reference" class="case-pro-final-img" />
+              <img loading="lazy" src="../images/blieve-discovery-2.jpg" alt="Picsart, competitor reference" class="case-pro-final-img" />
+            </div>
+            <div class="case-pro-narrow">
+              <p>I paid attention to</p>
+              <ul><li>How navigation is structured</li><li>How tools are grouped</li><li>How people give instructions to the AI</li><li>How a generation flows from start to finish</li><li>How new users are welcomed in</li></ul>
+              <p>What I kept seeing</p>
+              <ul><li>Most platforms pile on features but don't connect them</li><li>Interfaces get overwhelming very quickly</li><li>People care about the result, not the technology</li><li>Jumping between tools breaks the creative flow</li></ul>
+              <p>My biggest realisation was that people don't think in tools. Nobody wakes up wanting to "use the AI headshot tool". They think, "I need a good profile photo, fast."</p>
+              <p class="case-pro-callout">So I switched from designing feature by feature to designing the workflow first.</p>
+            </div>
+          </section>
+
+          <!-- Competitor Research -->
+          <section id="competitors" class="case-pro-section" data-reveal>
+            <h2>Competitor Research</h2>
+            <div class="case-pro-competitor-grid">
+              <article class="case-pro-competitor-card">
+                <h3>Midjourney</h3>
+                <div class="case-pro-proscons">
+                  <div class="case-pro-proscons-col case-pro-pros">
+                    <span class="case-pro-proscons-label">Pros</span>
+                    <ul>
+                      <li>High-quality AI image outputs</li>
+                      <li>Strong creative community ecosystem</li>
+                      <li>Simple prompting experience</li>
+                    </ul>
+                  </div>
+                  <div class="case-pro-proscons-col case-pro-cons">
+                    <span class="case-pro-proscons-label">Cons</span>
+                    <ul>
+                      <li>Workflow heavily depends on Discord</li>
+                      <li>Difficult for beginners to navigate</li>
+                      <li>Limited structured editing workflow</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <article class="case-pro-competitor-card">
+                <h3>Canva AI</h3>
+                <div class="case-pro-proscons">
+                  <div class="case-pro-proscons-col case-pro-pros">
+                    <span class="case-pro-proscons-label">Pros</span>
+                    <ul>
+                      <li>Beginner-friendly interface</li>
+                      <li>Strong all-in-one creation ecosystem</li>
+                      <li>Familiar editing experience</li>
+                    </ul>
+                  </div>
+                  <div class="case-pro-proscons-col case-pro-cons">
+                    <span class="case-pro-proscons-label">Cons</span>
+                    <ul>
+                      <li>AI features feel separated from the main workflow</li>
+                      <li>Limited advanced AI customization</li>
+                      <li>Interface can become crowded with features</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <article class="case-pro-competitor-card">
+                <h3>Runway</h3>
+                <div class="case-pro-proscons">
+                  <div class="case-pro-proscons-col case-pro-pros">
+                    <span class="case-pro-proscons-label">Pros</span>
+                    <ul>
+                      <li>Powerful AI video generation capabilities</li>
+                      <li>Professional creative workflow tools</li>
+                      <li>Strong timeline-based editing experience</li>
+                    </ul>
+                  </div>
+                  <div class="case-pro-proscons-col case-pro-cons">
+                    <span class="case-pro-proscons-label">Cons</span>
+                    <ul>
+                      <li>Complex interface for new users</li>
+                      <li>Steeper learning curve</li>
+                      <li>Navigation can feel overwhelming</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- Research -->
+          <section id="research" class="case-pro-section" data-reveal>
+            <h2>Research</h2>
+            <div class="case-pro-narrow">
+              <p>Next, I focused on what makes creating feel easy instead of intimidating.</p>
+            </div>
+            <img loading="lazy" src="../images/blieve-research.jpg" alt="Blieve.ai feature list research spreadsheet" class="case-pro-block-image" />
+            <div class="case-pro-narrow">
+              <p>What I learned</p>
+              <ul><li>Guided steps beat big dashboards full of options</li><li>A clear hierarchy stops people from hesitating</li><li>Familiar patterns build confidence</li><li>Hiding advanced controls until they're needed keeps beginners calm</li><li>Consistency between tools matters more than any single screen</li></ul>
+              <p class="case-pro-callout">The real opportunity was in the connections between tools, not in any one tool.</p>
+            </div>
+          </section>
+
+          <!-- Challenges -->
+          <section id="challenges" class="case-pro-section" data-reveal>
+            <h2>Challenges</h2>
+            <div class="case-pro-narrow">
+              <p>The hardest part was keeping every tool consistent while still letting each one do its own thing.</p>
+            </div>
+            <div class="case-pro-grid-final">
+              <img loading="lazy" src="../images/blieve-challenges-1.jpg" alt="Blieve.ai sidebar overview across AI tools" class="case-pro-final-img" />
+              <img loading="lazy" src="../images/blieve-challenges-2.jpg" alt="Blieve.ai tools panel states and settings" class="case-pro-final-img" />
+            </div>
+            <div class="case-pro-narrow">
+              <p>A headshot generator and an image-to-video tool need very different controls. Forcing them into the exact same screen would break one of them, but letting each go its own way would bring back the mess we started with. On top of that, new AI tools kept arriving while I was designing, so whatever I built had to stretch without getting cluttered.</p>
+              <p>My answer was to agree on what every tool shares, like the layout, navigation, buttons and how results appear, and to give each tool its own space only for the controls that make it unique.</p>
+              <p class="case-pro-callout">Simple enough for beginners, flexible enough for every tool. That balance shaped the whole project.</p>
+            </div>
+          </section>
+
+          <!-- Exploration -->
+          <section id="exploration" class="case-pro-section" data-reveal>
+            <h2>Exploration</h2>
+            <div class="case-pro-narrow">
+              <p>I explored several directions before settling on the structure.</p>
+            </div>
+            <div class="case-pro-grid-final">
+              <img loading="lazy" src="../images/blieve-exploration-1.jpg" alt="AI Image Generator exploration" class="case-pro-final-img" />
+              <img loading="lazy" src="../images/blieve-exploration-2.jpg" alt="Generative AI suite exploration" class="case-pro-final-img" />
+            </div>
+            <div class="case-pro-decision-list">
+              <div class="case-pro-decision-card"><strong>Tools or workflows?</strong><span>I compared a menu of tools with a flow based on what you're making. I chose guided workflows, because that's how people think about their work.</span></div>
+              <div class="case-pro-decision-card"><strong>Minimal or full dashboard?</strong><span>A dashboard that shows everything feels powerful but overwhelms. I went with a cleaner hierarchy, so the next step is always obvious.</span></div>
+              <div class="case-pro-decision-card"><strong>Split view or one canvas?</strong><span>I explored previews beside the controls and a single large canvas, looking for the one that kept the result front and centre.</span></div>
+              <div class="case-pro-decision-card"><strong>Simple or advanced controls?</strong><span>Simple defaults first, with advanced settings one step away. Fewer choices up front means less decision fatigue.</span></div>
+            </div>
+            <div class="case-pro-narrow">
+              <p class="case-pro-callout">I judged every direction by one question: does this help someone make something faster?</p>
+            </div>
+          </section>
+
+          <!-- Design System -->
+          <section id="design-system" class="case-pro-section" data-reveal>
+            <h2>Design System</h2>
+            <div class="case-pro-narrow">
+              <p>With this many tools, the system mattered more than any single screen.</p>
+            </div>
+            <img loading="lazy" src="../images/blieve-design-system.jpg" alt="Blieve.ai design system overview: inputs, tabs, dropdowns, buttons, icon buttons, settings thumbnails" class="case-pro-block-image" />
+            <div class="case-pro-narrow">
+              <p>I set up</p>
+              <ul><li>One set of spacing and layout rules</li><li>Reusable cards and pop-up windows</li><li>Forms that behave the same everywhere</li><li>A shared navigation</li><li>Components that adapt to each tool's needs</li></ul>
+              <p class="case-pro-callout">Adding a new AI tool became a matter of reusing parts we already had.</p>
+            </div>
+          </section>
+
+          <!-- Design -->
+          <section id="design" class="case-pro-section" data-reveal>
+            <h2>Design</h2>
+            <div class="case-pro-narrow">
+              <p>The final design is calm, consistent and ready to grow.</p>
+              <p>Key decisions</p>
+              <ul><li>The same layout across every AI tool</li><li>One central place to start creating</li><li>Simpler sign-up and login</li><li>A shorter, clearer checkout</li><li>A modular structure for future tools</li><li>Advanced settings shown only when needed</li></ul>
+              <p class="case-pro-callout">Every screen is there to help people create, not to make them learn the interface.</p>
+            </div>
+            <div class="case-pro-grid-final">
+              <img loading="lazy" src="../images/blieve-design-1.jpg" alt="Blieve.ai tablet, projects view" class="case-pro-final-img" />
+              <img loading="lazy" src="../images/blieve-design-2.jpg" alt="Blieve.ai laptop, explore view" class="case-pro-final-img" />
+              <img loading="lazy" src="../images/blieve-design-3.jpg" alt="Blieve.ai laptop, image generator" class="case-pro-final-img" />
+              <img loading="lazy" src="../images/blieve-design-4.jpg" alt="Blieve.ai tablet, image generator on couch" class="case-pro-final-img" />
+              <img loading="lazy" src="../images/blieve-design-5.jpg" alt="Blieve.ai mobile, explore" class="case-pro-final-img" />
+              <img loading="lazy" src="../images/blieve-design-6.jpg" alt="Blieve.ai tablet, sketch to image" class="case-pro-final-img" />
+            </div>
+          </section>
+
+          <!-- Outcome -->
+          <section id="outcome" class="case-pro-section" data-reveal>
+            <h2>Outcome</h2>
+            <div class="case-pro-narrow">
+              <p>Blieve.ai turned a set of separate tools into one connected platform.</p>
+            </div>
+            <div class="case-pro-grid-final">
+              <img loading="lazy" src="../images/blieve-outcome-1.jpg" alt="Blieve.ai projects view" class="case-pro-final-img" />
+              <img loading="lazy" src="../images/blieve-outcome-2.jpg" alt="Blieve.ai background remix workflow" class="case-pro-final-img" />
+            </div>
+            <div class="case-pro-narrow">
+              <p>People can now go from an idea to a finished image or video without switching apps or relearning anything. Eleven AI tools from 123RF now live in one place and share one design language.</p>
+              <p class="case-pro-callout">It also gave the team a design foundation that new AI features can plug straight into.</p>
+            </div>
+          </section>
+
+          <!-- Key Takeaways -->
+          <section id="takeaway" class="case-pro-section" data-reveal>
+            <h2>Key Takeaways</h2>
+            <blockquote class="case-pro-takeaway">
+              <span class="case-pro-takeaway-mark" aria-hidden="true">&ldquo;</span>
+              <div class="case-pro-takeaway-body">
+                <div class="case-pro-takeaway-content">
+                  <p class="case-pro-takeaway-lead">Blieve.ai taught me that good AI products aren't about having more features. They're about making the space between features feel effortless.</p>
+                  <p>The biggest lesson was thinking in workflows. People don't care which tool they're in. They care about getting to the result quickly, so the moments between tools turned out to matter as much as the tools themselves.</p>
+                  <p>It also showed me how much consistency matters in a product that changes fast. New AI capabilities kept arriving, and predictable patterns were what kept the experience from feeling overwhelming.</p>
+                  <p>And it taught me to design for what's coming, not only for what's already there. The system had to welcome tools that hadn't been built yet, without losing its shape.</p>
+                  <p>What I took away</p>
+                  <ul class="case-pro-takeaway-list"><li>Thinking in workflows, not features</li><li>Keeping a fast-moving product consistent</li><li>Building systems that can grow</li><li>Asking people to make fewer decisions</li><li>Designing for beginners and power users at once</li></ul>
+                </div>
+              </div>
+            </blockquote>
+          </section>
+        </div>
+      </article>
+    <a class="next-case" href="carbon.html" data-reveal>
+        <div class="next-case-text">
+          <div>
+            <span class="mono eyebrow">Next case study</span>
+            <div class="next-case-title">Carbon Credit Platform</div>
+          </div>
+          <span class="prow-go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <div class="next-case-media"><img src="../images/carbon-cover.jpg" alt="" loading="lazy" /></div>
+      </a>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <span class="mono eyebrow" data-reveal>Have a project in mind?</span>
+        <h2 class="footer-cta" data-reveal>Let's make something<br /><em>good</em> together.</h2>
+        <div class="footer-grid" data-reveal>
+          <a class="footer-mail" href="mailto:marvin.avl16@gmail.com?subject=Design%20Inquiry">
+            marvin.avl16@gmail.com
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+          <div class="socials">
+            <a class="social" href="https://www.behance.net/marvinaverill" target="_blank" rel="noopener noreferrer" aria-label="Behance"><img src="../assets/icons/behance.svg" alt="" /></a>
+            <a class="social" href="https://www.linkedin.com/in/marvinaverill/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="../assets/icons/linkedin.svg" alt="" /></a>
+            <a class="social" href="https://medium.com/@marvinaverill" target="_blank" rel="noopener noreferrer" aria-label="Medium"><img src="../assets/icons/medium.svg" alt="" /></a>
+            <a class="social" href="https://api.whatsapp.com/send/?phone=628116327333" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><img src="../assets/icons/whatsapp.svg" alt="" /></a>
+          </div>
+        </div>
+        <div class="footer-bottom mono">
+          <span>© <span data-year>2026</span> Marvin Averill Ledwin</span>
+        </div>
+      </div>
+    </footer>
+
+
+    <nav class="case-pro-nav" id="caseProNav" aria-label="Section progress">
+      <div class="case-pro-nav-inner">
+        <a href="#role" data-target="role">Role</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#goals" data-target="goals">Goals</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#background" data-target="background">Background</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#problem" data-target="problem">Problem</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#before-after" data-target="before-after">Before / After</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#solution" data-target="solution">Solution</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#discovery" data-target="discovery">Discovery</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#competitors" data-target="competitors">Competitors</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#research" data-target="research">Research</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#challenges" data-target="challenges">Challenges</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#exploration" data-target="exploration">Exploration</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#design-system" data-target="design-system">Design System</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#design" data-target="design">Design</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#outcome" data-target="outcome">Outcome</a>
+        <span class="case-pro-nav-sep" aria-hidden="true"></span>
+        <a href="#takeaway" data-target="takeaway">Takeaways</a>
+      </div>
+    </nav>
+
+    <script src="../assets/js/site.js" defer></script>
+    <script>
+      (function () {
+        const button = document.getElementById("copyButton");
+        const toast = document.getElementById("toast");
+        if (button && toast) {
+          button.addEventListener("click", () => {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+              toast.classList.add("show");
+              setTimeout(() => toast.classList.remove("show"), 3500);
+            });
+          });
+        }
+
+        const zoomables = document.querySelectorAll(
+          ".case-pro-cover, .case-pro-wire-img, .case-pro-final-img, .case-pro-block-image"
+        );
+        zoomables.forEach((img) => {
+          img.addEventListener("click", () => openModal(img.src));
+        });
+      })();
+
+      function openModal(src) {
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+        modalImg.src = src;
+        modal.classList.add("show");
+      }
+      function closeModal() {
+        document.getElementById("imageModal").classList.remove("show");
+      }
+      function handleBackdropClick(e) {
+        if (e.target.classList.contains("image-modal")) closeModal();
+      }
+
+      (function () {
+        const nav = document.getElementById("caseProNav");
+        if (!nav) return;
+        const workBar = document.querySelector(".work-bar");
+        const navInner = nav.querySelector(".case-pro-nav-inner");
+        const links = nav.querySelectorAll("a");
+        const sections = Array.from(links)
+          .map((a) => document.getElementById(a.dataset.target))
+          .filter(Boolean);
+        if (!sections.length) return;
+
+        function alignNavToWorkBar() {
+          if (!workBar) return;
+          nav.style.top = workBar.offsetHeight + "px";
+        }
+        alignNavToWorkBar();
+        window.addEventListener("resize", alignNavToWorkBar);
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(alignNavToWorkBar);
+        }
+
+        function scrollNavToActive(link) {
+          if (!navInner || !link) return;
+          const linkRect = link.getBoundingClientRect();
+          const navRect = navInner.getBoundingClientRect();
+          const linkCenter = linkRect.left + linkRect.width / 2;
+          const navCenter = navRect.left + navRect.width / 2;
+          const delta = linkCenter - navCenter;
+          if (Math.abs(delta) < 4) return;
+          navInner.scrollTo({
+            left: navInner.scrollLeft + delta,
+            behavior: "smooth",
+          });
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                links.forEach((l) => l.classList.remove("active"));
+                const match = nav.querySelector(
+                  `a[data-target="${entry.target.id}"]`
+                );
+                if (match) {
+                  match.classList.add("active");
+                  scrollNavToActive(match);
+                }
+              }
+            });
+          },
+          { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+        );
+        sections.forEach((s) => observer.observe(s));
+
+        const firstSection = document.getElementById("role");
+        if (firstSection) {
+          function updateNavVisibility() {
+            const rect = firstSection.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.5) {
+              nav.classList.add("visible");
+            } else {
+              nav.classList.remove("visible");
+            }
+          }
+          updateNavVisibility();
+          window.addEventListener("scroll", updateNavVisibility, {
+            passive: true,
+          });
+          window.addEventListener("resize", updateNavVisibility);
+        }
+      })();
+    </script>
+  </body>
+</html>
